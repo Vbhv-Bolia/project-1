@@ -1,0 +1,106 @@
+/* PROJECT-1 Design Tokens
+   Source: DESIGN_SYSTEM.md */
+
+:root {
+  /* ── Colour: Primary (IITGN Blue) ── */
+  --color-primary: #1a4480;
+  --color-primary-dark: #133566;
+  --color-primary-light: #2d5a9e;
+  --color-primary-subtle: #e8eef6;
+
+  /* ── Colour: Secondary (Neutral Grey) ── */
+  --color-secondary: #6b7280;
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+
+  /* ── Colour: Accent (Warm Orange) ── */
+  --color-accent: #e87722;
+  --color-accent-dark: #c9631a;
+  --color-accent-subtle: #fef3e8;
+
+  /* ── Colour: Status ── */
+  --color-success: #15803d;
+  --color-success-subtle: #ecfdf3;
+  --color-warning: #d97706;
+  --color-warning-subtle: #fffbeb;
+  --color-error: #dc2626;
+  --color-error-subtle: #fef2f2;
+
+  /* ── Colour: Surface ── */
+  --color-background: #ffffff;
+  --color-surface: var(--color-neutral-50);
+  --color-border: var(--color-neutral-200);
+  --color-text: var(--color-neutral-800);
+  --color-text-muted: var(--color-neutral-600);
+  --color-text-inverse: #ffffff;
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-dark);
+
+  /* ── Typography ── */
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --font-size-h1: 3rem;      /* 48px */
+  --font-size-h2: 2.25rem;   /* 36px */
+  --font-size-h3: 1.75rem;   /* 28px */
+  --font-size-h4: 1.375rem;  /* 22px */
+  --font-size-body: 1.125rem; /* 18px */
+  --font-size-small: 1rem;   /* 16px */
+  --font-size-caption: 0.875rem; /* 14px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ── Spacing (design system scale only) ── */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 1rem;     /* 16px */
+  --space-4: 1.5rem;   /* 24px */
+  --space-5: 2rem;     /* 32px */
+  --space-6: 3rem;     /* 48px */
+  --space-7: 4rem;     /* 64px */
+  --space-8: 5rem;     /* 80px */
+
+  /* ── Layout ── */
+  --max-width-content: 1280px;
+  --grid-columns: 12;
+  --grid-gap: var(--space-4);
+
+  /* ── Border Radius ── */
+  --radius: 0.75rem; /* 12px */
+
+  /* ── Elevation ── */
+  --shadow-none: none;
+  --shadow-1: 0 1px 3px rgba(17, 24, 39, 0.08), 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-2: 0 4px 12px rgba(17, 24, 39, 0.12), 0 2px 4px rgba(17, 24, 39, 0.06);
+
+  /* ── Motion ── */
+  --duration: 200ms;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Focus ── */
+  --focus-ring: 0 0 0 3px rgba(26, 68, 128, 0.35);
+  --focus-ring-offset: 2px;
+
+  /* ── Badge category colours ── */
+  --badge-registration: #1a4480;
+  --badge-registration-bg: #e8eef6;
+  --badge-holiday: #15803d;
+  --badge-holiday-bg: #ecfdf3;
+  --badge-examination: #dc2626;
+  --badge-examination-bg: #fef2f2;
+  --badge-foundation: #e87722;
+  --badge-foundation-bg: #fef3e8;
+}

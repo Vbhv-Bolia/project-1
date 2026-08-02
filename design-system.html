@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT-1 Design System</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="ds-page">
+
+  <header class="ds-header">
+    <div class="container">
+      <h1>PROJECT-1 Design System</h1>
+      <p>Visual foundation for the IIT Gandhinagar Academics Portal redesign. Every reusable component, token, and interaction pattern used across the project.</p>
+    </div>
+  </header>
+
+  <nav class="ds-nav" aria-label="Design system sections">
+    <div class="container">
+      <ul class="ds-nav__list">
+        <li><a class="ds-nav__link" href="#typography">Typography</a></li>
+        <li><a class="ds-nav__link" href="#colours">Colours</a></li>
+        <li><a class="ds-nav__link" href="#spacing">Spacing</a></li>
+        <li><a class="ds-nav__link" href="#buttons">Buttons</a></li>
+        <li><a class="ds-nav__link" href="#info-cards">Info Cards</a></li>
+        <li><a class="ds-nav__link" href="#dept-cards">Dept Cards</a></li>
+        <li><a class="ds-nav__link" href="#timeline">Timeline</a></li>
+        <li><a class="ds-nav__link" href="#accordion">Accordion</a></li>
+        <li><a class="ds-nav__link" href="#tables">Tables</a></li>
+        <li><a class="ds-nav__link" href="#badges">Badges</a></li>
+        <li><a class="ds-nav__link" href="#forms">Forms</a></li>
+        <li><a class="ds-nav__link" href="#states">States</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ── Typography ── -->
+    <section id="typography" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Typography</h2>
+        <p class="section__description">Inter typeface with a clear hierarchy for scannable academic content. Generous line spacing for readability.</p>
+      </header>
+
+      <div class="stack-4">
+        <div>
+          <p class="text-caption mb-2">H1 — 48px — SemiBold</p>
+          <h1>Academics at IIT Gandhinagar</h1>
+        </div>
+        <div>
+          <p class="text-caption mb-2">H2 — 36px — SemiBold</p>
+          <h2>Academic Calendar</h2>
+        </div>
+        <div>
+          <p class="text-caption mb-2">H3 — 28px — Medium</p>
+          <h3>Undergraduate Admissions</h3>
+        </div>
+        <div>
+          <p class="text-caption mb-2">H4 — 22px — Medium</p>
+          <h4>Department of Computer Science</h4>
+        </div>
+        <div>
+          <p class="text-caption mb-2">Body — 18px — Regular</p>
+          <p>IIT Gandhinagar offers a holistic, well-rounded curriculum designed to nurture intellectual curiosity and prepare students for academic and professional excellence.</p>
+        </div>
+        <div>
+          <p class="text-caption mb-2">Small — 16px</p>
+          <p class="text-small">Important dates and supplementary information appear at this size for secondary content.</p>
+        </div>
+        <div>
+          <p class="text-caption mb-2">Caption — 14px</p>
+          <p class="text-caption">Last updated: August 2026 · Academic Affairs Office</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Colours ── -->
+    <section id="colours" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Colour Palette</h2>
+        <p class="section__description">Institutional blue as primary, neutral greys for surfaces, warm orange for highlights, and dedicated status colours.</p>
+      </header>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Primary &amp; Accent</h3>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-primary);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">IITGN Blue</p>
+              <p class="color-swatch__value">#1a4480</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-primary-dark);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Primary Dark</p>
+              <p class="color-swatch__value">#133566</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-primary-subtle);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Primary Subtle</p>
+              <p class="color-swatch__value">#e8eef6</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-accent);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Warm Orange</p>
+              <p class="color-swatch__value">#e87722</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Neutrals</h3>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-neutral-50);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Neutral 50</p>
+              <p class="color-swatch__value">#f9fafb</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-neutral-200);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Neutral 200</p>
+              <p class="color-swatch__value">#e5e7eb</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-neutral-500);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Neutral 500</p>
+              <p class="color-swatch__value">#6b7280</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-neutral-800);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Neutral 800</p>
+              <p class="color-swatch__value">#1f2937</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Status</h3>
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-success);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Success</p>
+              <p class="color-swatch__value">#15803d</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-warning);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Warning</p>
+              <p class="color-swatch__value">#d97706</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__preview" style="background: var(--color-error);"></div>
+            <div class="color-swatch__info">
+              <p class="color-swatch__name">Error</p>
+              <p class="color-swatch__value">#dc2626</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Spacing ── -->
+    <section id="spacing" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Spacing System</h2>
+        <p class="section__description">Only these eight spacing values are used throughout the project. Generous whitespace reduces cognitive load.</p>
+      </header>
+
+      <div class="spacing-demo">
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">4px</span>
+          <div class="spacing-demo__bar" style="width: 4px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">8px</span>
+          <div class="spacing-demo__bar" style="width: 8px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">16px</span>
+          <div class="spacing-demo__bar" style="width: 16px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">24px</span>
+          <div class="spacing-demo__bar" style="width: 24px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">32px</span>
+          <div class="spacing-demo__bar" style="width: 32px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">48px</span>
+          <div class="spacing-demo__bar" style="width: 48px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">64px</span>
+          <div class="spacing-demo__bar" style="width: 64px;"></div>
+        </div>
+        <div class="spacing-demo__item">
+          <span class="spacing-demo__label">80px</span>
+          <div class="spacing-demo__bar" style="width: 80px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Buttons ── -->
+    <section id="buttons" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Buttons</h2>
+        <p class="section__description">Three variants with default, hover, active, disabled, and focus states. Consistent across every page.</p>
+      </header>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Variants</h3>
+        <div class="flex flex-wrap gap-3 flex-center">
+          <button type="button" class="btn btn--primary">
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+            Primary Button
+          </button>
+          <button type="button" class="btn btn--secondary">Secondary Button</button>
+          <button type="button" class="btn btn--text">Text Button</button>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection__title">States</h3>
+        <div class="state-demo">
+          <div class="state-demo__item">
+            <button type="button" class="btn btn--primary">Default</button>
+            <span class="state-demo__label">Default</span>
+          </div>
+          <div class="state-demo__item">
+            <button type="button" class="btn btn--primary" disabled>Disabled</button>
+            <span class="state-demo__label">Disabled</span>
+          </div>
+          <div class="state-demo__item">
+            <button type="button" class="btn btn--secondary" disabled>Disabled</button>
+            <span class="state-demo__label">Secondary Disabled</span>
+          </div>
+        </div>
+        <p class="text-caption mt-0">Hover and focus states are interactive — tab to a button or hover to preview.</p>
+      </div>
+    </section>
+
+    <!-- ── Information Cards ── -->
+    <section id="info-cards" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Information Cards</h2>
+        <p class="section__description">Grouped content with icon, title, description, and optional link. Hover lifts the card with a blue accent border.</p>
+      </header>
+
+      <div class="grid-3">
+        <article class="info-card">
+          <div class="info-card__icon" aria-hidden="true">
+            <i data-lucide="calendar" class="icon"></i>
+          </div>
+          <h3 class="info-card__title">Academic Calendar</h3>
+          <p class="info-card__description">View semester schedules, holidays, and important academic dates for the current year.</p>
+          <a href="#" class="info-card__link">
+            View calendar
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card__icon" aria-hidden="true">
+            <i data-lucide="graduation-cap" class="icon"></i>
+          </div>
+          <h3 class="info-card__title">Admissions</h3>
+          <p class="info-card__description">Explore undergraduate, postgraduate, and doctoral admission pathways and requirements.</p>
+          <a href="#" class="info-card__link">
+            Learn more
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card__icon" aria-hidden="true">
+            <i data-lucide="book-open" class="icon"></i>
+          </div>
+          <h3 class="info-card__title">Academic Resources</h3>
+          <p class="info-card__description">Access handbooks, policies, and guidelines for students and faculty members.</p>
+          <a href="#" class="info-card__link">
+            Browse resources
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Department Cards ── -->
+    <section id="dept-cards" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Department Cards</h2>
+        <p class="section__description">Represent academic departments with consistent hover lift, shadow, and arrow movement.</p>
+      </header>
+
+      <div class="grid-3">
+        <a href="#" class="dept-card">
+          <div class="dept-card__icon" aria-hidden="true">
+            <i data-lucide="cpu" class="icon"></i>
+          </div>
+          <h3 class="dept-card__name">Computer Science &amp; Engineering</h3>
+          <p class="dept-card__description">Algorithms, systems, AI, and software engineering with interdisciplinary research opportunities.</p>
+          <span class="dept-card__explore">
+            Explore department
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <a href="#" class="dept-card">
+          <div class="dept-card__icon" aria-hidden="true">
+            <i data-lucide="flask-conical" class="icon"></i>
+          </div>
+          <h3 class="dept-card__name">Chemical Engineering</h3>
+          <p class="dept-card__description">Process design, materials science, and sustainable chemical technologies.</p>
+          <span class="dept-card__explore">
+            Explore department
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <a href="#" class="dept-card">
+          <div class="dept-card__icon" aria-hidden="true">
+            <i data-lucide="atom" class="icon"></i>
+          </div>
+          <h3 class="dept-card__name">Physics</h3>
+          <p class="dept-card__description">Fundamental physics, optics, and experimental research in modern laboratories.</p>
+          <span class="dept-card__explore">
+            Explore department
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Timeline ── -->
+    <section id="timeline" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Timeline</h2>
+        <p class="section__description">Chronological events with date, connector, and hover highlight. Used on Admissions and Academic Calendar pages.</p>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
+          <div class="timeline__content">
+            <time class="timeline__date" datetime="2026-03-15">March 15, 2026</time>
+            <p class="timeline__event">Application Portal Opens</p>
+            <p class="timeline__detail">Online applications accepted for undergraduate programmes.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
+          <div class="timeline__content">
+            <time class="timeline__date" datetime="2026-04-30">April 30, 2026</time>
+            <p class="timeline__event">Application Deadline</p>
+            <p class="timeline__detail">Final date for submission of completed applications.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
+          <div class="timeline__content">
+            <time class="timeline__date" datetime="2026-06-10">June 10, 2026</time>
+            <p class="timeline__event">Interview Shortlist Announced</p>
+            <p class="timeline__detail">Selected candidates notified via registered email.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
+          <div class="timeline__content">
+            <time class="timeline__date" datetime="2026-07-20">July 20, 2026</time>
+            <p class="timeline__event">Orientation Week Begins</p>
+            <p class="timeline__detail">Welcome sessions and campus familiarisation for new students.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ── Accordion ── -->
+    <section id="accordion" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Accordion</h2>
+        <p class="section__description">Collapsible content for FAQs and policies. One section open at a time. Keyboard accessible with arrow keys.</p>
+      </header>
+
+      <div class="accordion" data-accordion>
+        <div class="accordion__item">
+          <button
+            type="button"
+            class="accordion__trigger"
+            id="acc-trigger-1"
+            aria-expanded="true"
+            aria-controls="acc-panel-1"
+          >
+            What are the eligibility criteria for undergraduate admission?
+            <i data-lucide="chevron-down" class="accordion__icon" aria-hidden="true"></i>
+          </button>
+          <div class="accordion__panel" id="acc-panel-1" role="region" aria-labelledby="acc-trigger-1">
+            <div class="accordion__content">
+              <p>Applicants must have completed their higher secondary education with qualifying marks in relevant subjects. Specific requirements vary by programme and are detailed on the admissions page.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button
+            type="button"
+            class="accordion__trigger"
+            id="acc-trigger-2"
+            aria-expanded="false"
+            aria-controls="acc-panel-2"
+          >
+            How do I apply for financial aid or scholarships?
+            <i data-lucide="chevron-down" class="accordion__icon" aria-hidden="true"></i>
+          </button>
+          <div class="accordion__panel" id="acc-panel-2" role="region" aria-labelledby="acc-trigger-2" hidden>
+            <div class="accordion__content">
+              <p>Financial aid applications are submitted alongside admission forms. Merit-based and need-based scholarships are available. Visit the Scholarships and Financial Aid section for current schemes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button
+            type="button"
+            class="accordion__trigger"
+            id="acc-trigger-3"
+            aria-expanded="false"
+            aria-controls="acc-panel-3"
+          >
+            Can I visit the campus before applying?
+            <i data-lucide="chevron-down" class="accordion__icon" aria-hidden="true"></i>
+          </button>
+          <div class="accordion__panel" id="acc-panel-3" role="region" aria-labelledby="acc-trigger-3" hidden>
+            <div class="accordion__content">
+              <p>Campus visits can be arranged through the Admissions Office during designated open days. Contact the office to schedule a guided tour.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Tables ── -->
+    <section id="tables" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Tables</h2>
+        <p class="section__description">Structured data with sticky header, zebra striping, row hover, and comfortable spacing.</p>
+      </header>
+
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Event</th>
+              <th scope="col">Category</th>
+              <th scope="col">Semester</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aug 1, 2026</td>
+              <td>Monsoon Semester Begins</td>
+              <td><span class="badge badge--registration">Registration</span></td>
+              <td>Monsoon 2026</td>
+            </tr>
+            <tr>
+              <td>Aug 15, 2026</td>
+              <td>Independence Day</td>
+              <td><span class="badge badge--holiday">Holiday</span></td>
+              <td>Monsoon 2026</td>
+            </tr>
+            <tr>
+              <td>Sep 20, 2026</td>
+              <td>Mid-Semester Examinations</td>
+              <td><span class="badge badge--examination">Examination</span></td>
+              <td>Monsoon 2026</td>
+            </tr>
+            <tr>
+              <td>Oct 5, 2026</td>
+              <td>Foundation Programme Workshop</td>
+              <td><span class="badge badge--foundation">Foundation Programme</span></td>
+              <td>Monsoon 2026</td>
+            </tr>
+            <tr>
+              <td>Nov 28, 2026</td>
+              <td>End-Semester Examinations</td>
+              <td><span class="badge badge--examination">Examination</span></td>
+              <td>Monsoon 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── Badges ── -->
+    <section id="badges" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Badges</h2>
+        <p class="section__description">Event category labels with consistent colours. Used in calendar and schedule views.</p>
+      </header>
+
+      <div class="flex flex-wrap gap-3 flex-center mb-4">
+        <span class="badge badge--registration">Registration</span>
+        <span class="badge badge--holiday">Holiday</span>
+        <span class="badge badge--examination">Examination</span>
+        <span class="badge badge--foundation">Foundation Programme</span>
+      </div>
+
+      <h3 class="subsection__title">Status Badges</h3>
+      <div class="flex flex-wrap gap-3 flex-center">
+        <span class="badge badge--success">Confirmed</span>
+        <span class="badge badge--warning">Pending</span>
+        <span class="badge badge--error">Cancelled</span>
+      </div>
+    </section>
+
+    <!-- ── Forms ── -->
+    <section id="forms" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Form Inputs</h2>
+        <p class="section__description">Accessible form controls with visible hover and focus states.</p>
+      </header>
+
+      <div class="grid-2">
+        <div>
+          <div class="form-group">
+            <label class="form-label form-label--required" for="input-name">Full Name</label>
+            <input type="text" id="input-name" class="form-input" placeholder="Enter your full name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label--required" for="input-email">Email Address</label>
+            <input type="email" id="input-email" class="form-input" placeholder="name@example.com">
+            <p class="form-hint">We will use this email for admission updates.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-programme">Programme</label>
+            <select id="input-programme" class="form-select">
+              <option value="">Select a programme</option>
+              <option value="btech">B.Tech</option>
+              <option value="mtech">M.Tech</option>
+              <option value="phd">Ph.D.</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label class="form-label" for="input-message">Message</label>
+            <textarea id="input-message" class="form-textarea" placeholder="Your enquiry..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="input-error">Field with Error</label>
+            <input type="text" id="input-error" class="form-input form-input--error" value="invalid@" aria-describedby="error-msg">
+            <p class="form-error" id="error-msg">Please enter a valid email address.</p>
+          </div>
+
+          <fieldset class="form-group" style="border: none; padding: 0; margin: 0;">
+            <legend class="form-label">Preferred Contact Method</legend>
+            <div class="form-check">
+              <input type="radio" id="contact-email" name="contact" class="form-check__input" checked>
+              <label for="contact-email" class="form-check__label">Email</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="contact-phone" name="contact" class="form-check__input">
+              <label for="contact-phone" class="form-check__label">Phone</label>
+            </div>
+          </fieldset>
+
+          <div class="form-check">
+            <input type="checkbox" id="terms" class="form-check__input">
+            <label for="terms" class="form-check__label">I agree to the terms and conditions</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Hover & Focus States ── -->
+    <section id="states" class="section">
+      <header class="section__header">
+        <h2 class="section__title">Hover &amp; Focus States</h2>
+        <p class="section__description">Interactions communicate feedback at 200ms. Tab through elements to preview keyboard focus rings.</p>
+      </header>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Elevation Levels</h3>
+        <div class="grid-3">
+          <div style="padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius);">
+            <p class="text-small mb-2"><strong>Level 0</strong> — Flat</p>
+            <p class="text-caption mt-0">No shadow. Default resting state.</p>
+          </div>
+          <div style="padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow-1);">
+            <p class="text-small mb-2"><strong>Level 1</strong> — Cards</p>
+            <p class="text-caption mt-0">Subtle shadow for cards and containers.</p>
+          </div>
+          <div class="hover-lift" style="padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow-1); cursor: pointer;">
+            <p class="text-small mb-2"><strong>Level 2</strong> — Hover</p>
+            <p class="text-caption mt-0">Hover this panel to see lift effect.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Interactive Focus Demo</h3>
+        <div class="flex flex-wrap gap-3 flex-center">
+          <a href="#">Focusable Link</a>
+          <button type="button" class="btn btn--primary">Focusable Button</button>
+          <input type="text" class="form-input" style="width: auto;" placeholder="Focusable input" aria-label="Focus demo input">
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection__title">Border Radius</h3>
+        <p class="text-caption">All interactive elements use a consistent <code>12px</code> border radius.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/components.js"></script>
+</body>
+</html>
