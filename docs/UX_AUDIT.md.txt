@@ -1,0 +1,209 @@
+# UX_AUDIT.md
+
+# PROJECT-1
+
+## UX Audit of the IIT Gandhinagar Academics Portal
+
+---
+
+# Purpose
+
+This document analyzes the current IIT Gandhinagar Academics portal from a User Experience (UX) perspective.
+
+The goal of PROJECT-1 is not to redesign the branding or content, but to improve usability, readability and information discoverability while preserving the existing institutional identity.
+
+The observations below are based on the current IIT Gandhinagar Academics webpages.
+
+---
+
+# Evaluation Criteria
+
+The audit evaluates the website using the following UX principles:
+
+- Visual Hierarchy
+- Information Architecture
+- Readability
+- Navigation
+- Consistency
+- Accessibility
+- Interaction Design
+- Cognitive Load
+
+---
+
+# 1. Academics Homepage
+
+## Current Observations
+
+- Large amounts of information are presented with very little visual separation.
+- Typography hierarchy is weak, making it difficult to distinguish between primary and secondary information.
+- Most content is arranged as plain text or links.
+- Important actions are visually similar to less important content.
+- The page feels dense despite containing useful information.
+
+---
+
+## UX Issues
+
+- High cognitive load
+- Weak visual hierarchy
+- Limited scannability
+- Inconsistent spacing
+
+---
+
+## Proposed Improvements
+
+- Introduce clearer content sections.
+- Improve typography hierarchy.
+- Add consistent spacing throughout the page.
+- Replace long lists with reusable information cards where appropriate.
+- Preserve the existing navigation while improving readability.
+
+---
+
+# 2. Academic Calendar
+
+## Current Observations
+
+- Information is presented as a large static table.
+- Users must manually scan every row to locate events.
+- Event categories are visually indistinguishable.
+- The page prioritizes completeness over usability.
+
+---
+
+## UX Issues
+
+- Dense information presentation
+- Difficult event discovery
+- Limited visual hierarchy
+- Static interaction model
+
+---
+
+## Proposed Improvements
+
+- Preserve the existing table view.
+- Introduce an interactive Calendar View.
+- Introduce a Timeline View.
+- Add month navigation.
+- Introduce colour-coded event categories.
+- Allow exporting events as an ICS calendar file.
+
+---
+
+# 3. Admissions
+
+## Current Observations
+
+- Large text blocks reduce readability.
+- Information hierarchy is weak.
+- Important dates and actions receive little visual emphasis.
+- Users must read long sections before finding relevant information.
+
+---
+
+## UX Issues
+
+- High reading effort
+- Weak emphasis
+- Limited content organization
+
+---
+
+## Proposed Improvements
+
+- Introduce a visual admission timeline.
+- Improve section hierarchy.
+- Increase whitespace.
+- Highlight important dates and deadlines.
+- Improve typography for easier scanning.
+
+---
+
+# 4. Departments
+
+## Current Observations
+
+- Departments are primarily presented as text links.
+- Limited visual distinction between departments.
+- Minimal interaction feedback.
+- Opportunities for easier browsing are underutilized.
+
+---
+
+## UX Issues
+
+- Weak discoverability
+- Static presentation
+- Low engagement
+
+---
+
+## Proposed Improvements
+
+- Introduce reusable department cards.
+- Add subtle hover interactions.
+- Improve spacing and grouping.
+- Maintain institutional appearance while modernizing presentation.
+
+---
+
+# Common UX Issues
+
+The following issues are observed across multiple pages.
+
+## Cluttered Layout
+
+Many pages contain dense blocks of information with insufficient whitespace.
+
+---
+
+## Weak Visual Hierarchy
+
+Headings, body text and links often compete for attention.
+
+---
+
+## Inconsistent Component Styling
+
+Buttons, tables and content sections lack a unified design language.
+
+---
+
+## Limited Interaction Feedback
+
+Interactive elements provide minimal visual feedback.
+
+---
+
+## High Cognitive Load
+
+Users frequently need to read entire sections rather than quickly scanning information.
+
+---
+
+# PROJECT-1 UX Goals
+
+The redesign aims to:
+
+- Improve readability.
+- Improve discoverability.
+- Reduce cognitive load.
+- Preserve familiarity.
+- Introduce a unified design system.
+- Improve consistency.
+- Improve accessibility.
+
+---
+
+# Design Philosophy
+
+PROJECT-1 follows one guiding principle:
+
+> Evolution, not Revolution.
+
+The redesign should feel like an official improvement to the IIT Gandhinagar website rather than a complete redesign.
+
+The objective is to modernize the experience while respecting the institution's existing identity.

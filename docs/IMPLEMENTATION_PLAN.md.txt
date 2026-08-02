@@ -1,0 +1,291 @@
+# IMPLEMENTATION_PLAN.md
+
+# PROJECT-1 Implementation Roadmap
+
+---
+
+# Project Goal
+
+Develop a modern redesign of the IIT Gandhinagar Academics Portal while preserving its institutional identity.
+
+Development will follow a component-first approach to maximize consistency and maintainability.
+
+---
+
+# Development Strategy
+
+PROJECT-1 follows Component-Driven Development.
+
+The workflow is:
+
+Research
+
+↓
+
+Design System
+
+↓
+
+Reusable Components
+
+↓
+
+Page Assembly
+
+↓
+
+Testing
+
+↓
+
+Refinement
+
+No page should be fully developed before the required reusable components exist.
+
+---
+
+# Development Phases
+
+## Phase 1
+
+Planning
+
+Status
+
+✅ Completed
+
+Deliverables
+
+- Project Specification
+- Design System
+- Component Library
+- UX Audit
+- Implementation Plan
+
+---
+
+## Phase 2
+
+Foundation
+
+Status
+
+⬜ Pending
+
+Tasks
+
+- CSS Variables
+- Typography
+- Layout
+- Global Styles
+- Animation System
+
+---
+
+## Phase 3
+
+Reusable Components
+
+Status
+
+⬜ Pending
+
+Tasks
+
+- Navbar
+- Hero
+- Breadcrumb
+- Buttons
+- Cards
+- Tables
+- Accordion
+- Timeline
+- Footer
+
+---
+
+## Phase 4
+
+Page Development
+
+Status
+
+⬜ Pending
+
+Pages
+
+- Academics Homepage
+- Admissions
+- Departments
+- Academic Calendar
+
+---
+
+## Phase 5
+
+Testing
+
+Status
+
+⬜ Pending
+
+Tasks
+
+- Accessibility
+- Browser Testing
+- Responsiveness (Desktop)
+- Code Cleanup
+
+---
+
+## Phase 6
+
+Submission
+
+Status
+
+⬜ Pending
+
+Tasks
+
+- Final Review
+- Documentation
+- GitHub Cleanup
+- Deployment
+- Presentation
+
+---
+
+# Build Order
+
+1
+
+Design System
+
+↓
+
+2
+
+Component Library
+
+↓
+
+3
+
+Academics Homepage
+
+↓
+
+4
+
+Admissions
+
+↓
+
+5
+
+Departments
+
+↓
+
+6
+
+Academic Calendar
+
+↓
+
+7
+
+Testing
+
+↓
+
+8
+
+Submission
+
+---
+
+# Project Priorities
+
+Priority 1
+
+Academic Calendar
+
+Priority 2
+
+Design Consistency
+
+Priority 3
+
+Component Reuse
+
+Priority 4
+
+Animations
+
+---
+
+# Testing Checklist
+
+Typography
+
+Spacing
+
+Hover States
+
+Accessibility
+
+Keyboard Navigation
+
+Component Consistency
+
+Semantic HTML
+
+CSS Organization
+
+JavaScript Organization
+
+---
+
+# Definition of Done
+
+A page is considered complete when
+
+✓ Uses reusable components
+
+✓ Follows design system
+
+✓ Uses semantic HTML
+
+✓ Contains no duplicated CSS
+
+✓ Meets accessibility requirements
+
+✓ Matches IITGN branding
+
+✓ Includes its signature improvement
+
+---
+
+# Final Deliverables
+
+Source Code
+
+Documentation
+
+Git Repository
+
+Deployment Link
+
+Presentation
+
+---
+
+# PROJECT-1 Rule
+
+Build components first.
+
+Build pages second.
+
+Refactor continuously.

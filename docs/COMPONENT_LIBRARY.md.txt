@@ -1,0 +1,303 @@
+# COMPONENT_LIBRARY.md
+
+# PROJECT-1 Component Library
+
+---
+
+# Purpose
+
+This document defines every reusable UI component used throughout PROJECT-1.
+
+Pages should be assembled using these components rather than creating page-specific elements.
+
+Consistency takes priority over uniqueness.
+
+---
+
+# 1. Navigation Bar
+
+Purpose
+
+Primary navigation across all Academics pages.
+
+Contents
+
+- IITGN Logo
+- Primary Navigation
+- Active Page Indicator
+
+States
+
+- Default
+- Hover
+- Active
+
+Rules
+
+- Identical across every page
+- Maintain existing navigation hierarchy
+- Use subtle active indicators
+
+---
+
+# 2. Hero Section
+
+Purpose
+
+Introduce each page.
+
+Contents
+
+- Breadcrumb
+- Page Title
+- Short Description
+
+Rules
+
+- Maximum two lines of description
+- Clear visual hierarchy
+- Consistent spacing
+
+---
+
+# 3. Breadcrumb
+
+Purpose
+
+Display the user's location within the website.
+
+Example
+
+Home → Academics → Admissions
+
+Rules
+
+- Present on every page except homepage
+- Always directly below Hero
+
+---
+
+# 4. Button
+
+Variants
+
+- Primary
+- Secondary
+- Text
+
+States
+
+- Default
+- Hover
+- Active
+- Disabled
+- Focus
+
+Rules
+
+- Reuse same button styles everywhere
+- No page-specific buttons
+
+---
+
+# 5. Information Card
+
+Purpose
+
+Present grouped information.
+
+Used On
+
+- Academics Homepage
+- Admissions
+- Resources
+
+Structure
+
+- Icon
+- Title
+- Description
+- Optional Link
+
+Hover
+
+- Lift slightly
+- Shadow increases
+- Blue accent border appears
+
+---
+
+# 6. Department Card
+
+Purpose
+
+Represent an academic department.
+
+Structure
+
+- Department Icon
+- Department Name
+- Short Description
+- Explore Indicator
+
+Hover
+
+- Lift
+- Shadow
+- Arrow movement
+
+Rules
+
+Every department card should behave identically.
+
+---
+
+# 7. Timeline
+
+Purpose
+
+Display chronological information.
+
+Used On
+
+- Admissions
+- Academic Calendar
+
+Structure
+
+- Date
+- Event
+- Connector
+
+Interaction
+
+- Hover highlights event
+- Timeline node enlarges slightly
+
+---
+
+# 8. Accordion
+
+Purpose
+
+Collapse lengthy content.
+
+Used On
+
+- FAQs
+- Policies
+- Guidelines
+
+Rules
+
+- Only one section expanded by default
+- Smooth animation
+- Keyboard accessible
+
+---
+
+# 9. Table
+
+Purpose
+
+Display structured information.
+
+Used On
+
+- Academic Calendar
+- Schedules
+- Policies
+
+Features
+
+- Sticky header
+- Zebra striping
+- Row hover
+- Comfortable spacing
+
+---
+
+# 10. Calendar Component
+
+Purpose
+
+Flagship feature of PROJECT-1.
+
+Views
+
+- Calendar View
+- Timeline View
+- Original Table View
+
+Features
+
+- Semester Toggle
+- Month Navigation
+- Colour-coded Events
+- ICS Export
+
+Rules
+
+Must preserve all original information.
+
+---
+
+# 11. Footer
+
+Contents
+
+- Contact Information
+- Quick Links
+- Copyright
+
+Rules
+
+Identical across all pages.
+
+---
+
+# 12. Badges
+
+Purpose
+
+Highlight event categories.
+
+Examples
+
+- Registration
+- Holiday
+- Examination
+- Foundation Programme
+
+Rules
+
+Consistent colours.
+
+---
+
+# Accessibility
+
+Every component should support
+
+- Keyboard navigation
+- Visible focus states
+- Semantic HTML
+- Sufficient contrast
+
+---
+
+# Reusability Rule
+
+If a component already exists,
+
+reuse it.
+
+Do not create another version unless absolutely necessary.
+
+---
+
+# PROJECT-1 Principle
+
+Components are designed once.
+
+Pages are assembled from components.

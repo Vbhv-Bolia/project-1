@@ -1,0 +1,314 @@
+# DESIGN_SYSTEM.md
+
+# PROJECT-1 Design System
+
+---
+
+# Purpose
+
+This document defines the visual language used throughout PROJECT-1.
+
+Every page and every reusable component should follow these rules to ensure consistency.
+
+The objective is to modernize the IIT Gandhinagar Academics portal while preserving its institutional identity.
+
+---
+
+# Design Personality
+
+The interface should feel:
+
+- Professional
+- Academic
+- Trustworthy
+- Calm
+- Clean
+- Modern
+- Minimal
+
+The interface should NOT feel:
+
+- Startup-like
+- Experimental
+- Over-designed
+- Flashy
+- Trend-driven
+
+---
+
+# Typography
+
+Font Family
+
+Inter
+
+Hierarchy
+
+H1 – 48px – SemiBold
+
+H2 – 36px – SemiBold
+
+H3 – 28px – Medium
+
+H4 – 22px – Medium
+
+Body – 18px – Regular
+
+Small – 16px
+
+Captions – 14px
+
+Paragraphs should use generous line spacing for readability.
+
+---
+
+# Colour System
+
+Primary
+
+IITGN Blue
+
+Used for:
+
+- Navigation
+- Primary buttons
+- Active states
+- Links
+
+Secondary
+
+Neutral grey
+
+Used for:
+
+- Backgrounds
+- Cards
+- Tables
+
+Accent
+
+Warm orange
+
+Used sparingly for:
+
+- Deadlines
+- Highlights
+- Important notices
+
+Status Colours
+
+Green
+
+Amber
+
+Red
+
+These colours should only communicate status.
+
+---
+
+# Layout
+
+Maximum Content Width
+
+1280px
+
+Grid
+
+12-column responsive grid
+
+Whitespace should be generous.
+
+Content should never feel crowded.
+
+---
+
+# Spacing System
+
+Only the following spacing values should be used.
+
+4px
+
+8px
+
+16px
+
+24px
+
+32px
+
+48px
+
+64px
+
+80px
+
+---
+
+# Border Radius
+
+12px
+
+Used consistently across:
+
+Cards
+
+Buttons
+
+Inputs
+
+Tables
+
+Accordions
+
+---
+
+# Elevation
+
+Three levels only.
+
+Level 0
+
+Flat
+
+Level 1
+
+Cards
+
+Level 2
+
+Hover
+
+Avoid excessive shadows.
+
+---
+
+# Buttons
+
+Variants
+
+Primary
+
+Secondary
+
+Text
+
+States
+
+Default
+
+Hover
+
+Active
+
+Disabled
+
+Focus
+
+Buttons should remain visually consistent across every page.
+
+---
+
+# Cards
+
+Every card should contain
+
+Icon
+
+Title
+
+Short Description
+
+Optional Action
+
+Cards should maintain identical spacing, hover behaviour and typography.
+
+---
+
+# Tables
+
+Tables should include
+
+Rounded corners
+
+Sticky header
+
+Alternating row colours
+
+Hover highlight
+
+Comfortable spacing
+
+---
+
+# Icons
+
+Use a single icon family throughout the project.
+
+Lucide Icons are recommended.
+
+Icons should remain simple and consistent.
+
+---
+
+# Motion
+
+Animation Duration
+
+200ms
+
+Allowed animations
+
+Fade
+
+Slide
+
+Expand
+
+Hover Lift
+
+Animations should communicate interaction.
+
+Avoid decorative motion.
+
+---
+
+# Images
+
+Use only authentic IIT Gandhinagar imagery.
+
+Avoid stock photography.
+
+---
+
+# Accessibility
+
+Maintain high colour contrast.
+
+Support keyboard navigation.
+
+Use visible focus states.
+
+Use semantic HTML.
+
+---
+
+# Visual Consistency
+
+Every page should reuse:
+
+Typography
+
+Spacing
+
+Cards
+
+Buttons
+
+Tables
+
+Colours
+
+Animations
+
+Consistency should take priority over novelty.

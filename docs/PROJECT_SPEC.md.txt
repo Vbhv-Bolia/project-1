@@ -1,0 +1,268 @@
+# PROJECT-1
+
+## IIT Gandhinagar Academics Portal Redesign
+
+---
+
+# Project Overview
+
+PROJECT-1 is a redesign of the IIT Gandhinagar Academics portal developed as part of the IIT Gandhinagar Foundation Programme Web Design Project.
+
+The objective is not to redesign IIT Gandhinagar's identity, but to improve the usability and user experience of the Academics section while preserving the institute's branding, structure and familiarity.
+
+This project focuses exclusively on frontend development using HTML, CSS and Vanilla JavaScript. No backend functionality will be implemented.
+
+---
+
+# Vision
+
+Create an Academics portal that feels like a natural evolution of the current IIT Gandhinagar website.
+
+The redesign should improve readability, accessibility and discoverability while maintaining the trust and professionalism expected from an academic institution.
+
+PROJECT-1 follows one central philosophy:
+
+> Evolution, not Revolution.
+
+---
+
+# Project Objectives
+
+The redesign aims to:
+
+- Improve information hierarchy across the Academics portal.
+- Reduce clutter and improve readability.
+- Organize content into clear visual sections.
+- Create a consistent design language across all Academics pages.
+- Improve accessibility using semantic HTML and modern frontend practices.
+- Develop reusable UI components for easier maintenance.
+- Introduce meaningful interactions that provide user feedback without distracting from content.
+- Demonstrate how thoughtful UX improvements can modernize an institutional website without changing its identity.
+
+---
+
+# Scope
+
+PROJECT-1 focuses on redesigning the IIT Gandhinagar Academics section.
+
+The following pages are included:
+
+- Academics Homepage
+- Academic Calendar
+- Admissions
+- Departments
+- Additional Academics-related pages where required
+
+Desktop experience is the primary focus of this project.
+
+---
+
+# Target Users
+
+The redesigned portal is intended primarily for:
+
+- Prospective students
+- Current students
+- Faculty members
+- Parents
+- Academic administrators
+
+Each group should be able to locate important information quickly without unnecessary navigation.
+
+---
+
+# Design Philosophy
+
+PROJECT-1 follows five core principles.
+
+## 1. Preserve IITGN Identity
+
+The redesign should immediately feel like an official IIT Gandhinagar website.
+
+Brand colours, navigation hierarchy and institutional appearance should remain recognizable.
+
+---
+
+## 2. Improve Information Discoverability
+
+Users should be able to scan pages instead of reading every paragraph.
+
+Information should be grouped logically using headings, cards and spacing.
+
+---
+
+## 3. Reduce Cognitive Load
+
+Large blocks of text should be broken into manageable sections.
+
+Whitespace should guide attention.
+
+Important information should naturally stand out.
+
+---
+
+## 4. Introduce Meaningful Interaction
+
+Animations should communicate feedback rather than decoration.
+
+Hover states, transitions and interactive elements should improve usability instead of creating visual noise.
+
+---
+
+## 5. Design for Maintainability
+
+Future developers or institute staff should be able to modify pages easily.
+
+The website should prioritize reusable components and clean organization.
+
+---
+
+# Signature Improvements
+
+Each page introduces one primary improvement.
+
+| Page | Signature Improvement |
+|------|------------------------|
+| Academics Homepage | Improved visual hierarchy |
+| Academic Calendar | Interactive calendar with multiple views |
+| Admissions | Clear admission journey through timeline |
+| Departments | Modern interactive department cards |
+
+---
+
+# Primary Visual Anchors
+
+Each page should contain one dominant visual element.
+
+| Page | Primary Visual Anchor |
+|------|------------------------|
+| Academics Homepage | Hero Section |
+| Academic Calendar | Interactive Calendar |
+| Admissions | Timeline |
+| Departments | Department Card Grid |
+
+---
+
+# User Experience Goals
+
+The redesign should enable users to:
+
+- Locate information faster.
+- Understand page structure immediately.
+- Navigate confidently.
+- Read content comfortably.
+- Perform common tasks with fewer clicks.
+
+Every design decision should answer one question:
+
+**Does this improve the experience of students, faculty or applicants?**
+
+If not, the feature should not be included.
+
+---
+
+# Technical Constraints
+
+The project will use:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+The project will NOT use:
+
+- React
+- Angular
+- Vue
+- Bootstrap
+- Tailwind CSS
+- Backend technologies
+
+---
+
+# Coding Standards
+
+The codebase should follow these principles:
+
+- Semantic HTML
+- Modular CSS
+- CSS Variables
+- Reusable Components
+- Consistent Naming
+- Accessibility First
+- Clean File Structure
+- No Duplicate Code
+- Separate HTML, CSS and JavaScript
+
+---
+
+# Component-Based Development
+
+Pages should be assembled using reusable components rather than independently designed.
+
+Examples include:
+
+- Navigation Bar
+- Footer
+- Buttons
+- Cards
+- Tables
+- Timeline
+- Accordion
+- Breadcrumb
+- Hero Section
+
+Consistency across components is more important than creating many unique designs.
+
+---
+
+# Accessibility Goals
+
+PROJECT-1 aims to improve accessibility through:
+
+- Proper heading hierarchy
+- Semantic HTML elements
+- Keyboard-friendly interactions
+- Sufficient colour contrast
+- Visible focus states
+- Descriptive labels where required
+
+Accessibility is considered a core design requirement rather than an optional feature.
+
+---
+
+# Success Criteria
+
+PROJECT-1 will be considered successful if it:
+
+- Preserves IITGN's institutional identity.
+- Creates a cleaner visual hierarchy.
+- Improves readability.
+- Makes important information easier to locate.
+- Demonstrates consistent UI components.
+- Remains maintainable for future developers.
+- Avoids unnecessary visual complexity.
+- Feels like a genuine evolution of the current website.
+
+---
+
+# Deliverables
+
+The completed project will include:
+
+- Redesigned Academics Homepage
+- Redesigned Academic Calendar
+- Redesigned Admissions Page
+- Redesigned Departments Page
+- Shared Design System
+- Reusable Component Library
+- Clean HTML, CSS and JavaScript codebase
+- Supporting documentation
+
+---
+
+# PROJECT-1 Principle
+
+PROJECT-1 is not about making the website look different.
+
+It is about making the website work better while remaining unmistakably IIT Gandhinagar.
