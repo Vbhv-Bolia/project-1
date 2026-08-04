@@ -3,9 +3,349 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IIT Gandhinagar Academics Portal</title>
+  <title>IIT Gandhinagar | Academics Portal</title>
+  <meta name="description" content="Official portal for academic programmes, admissions, calendar, regulations, and student affairs at IIT Gandhinagar.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
+  <!-- ── Institutional Navigation Bar ── -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="navbar__brand" aria-label="IIT Gandhinagar Academics Home">
+        <span class="navbar__logo-box" aria-hidden="true">IITGN</span>
+        <div class="navbar__title">
+          <span class="navbar__institute">IIT Gandhinagar</span>
+          <span class="navbar__portal">Academics Portal</span>
+        </div>
+      </a>
+      <nav aria-label="Primary Academics Navigation">
+        <ul class="navbar__nav">
+          <li><a href="index.html" class="navbar__link navbar__link--active" aria-current="page">Academics Home</a></li>
+          <li><a href="#academic-affairs" class="navbar__link">Academic Affairs</a></li>
+          <li><a href="#admissions" class="navbar__link">Admissions</a></li>
+          <li><a href="#academic-programmes" class="navbar__link">Programmes</a></li>
+          <li><a href="#academic-calendar" class="navbar__link">Calendar</a></li>
+          <li><a href="#departments" class="navbar__link">Departments</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Page Banner ── -->
+  <div class="page-banner">
+    <div class="container">
+      <p class="page-banner__text">Academics Portal &middot; Indian Institute of Technology Gandhinagar</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ── 1. Hero Section ── -->
+    <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+      <div class="container">
+        <h1 style="font-size: var(--font-size-h2); margin-bottom: var(--space-2);">Academics at IIT Gandhinagar</h1>
+        <p class="section__description" style="max-width: 75ch; color: var(--color-text-muted); margin-bottom: 0;">
+          IIT Gandhinagar fosters an academic environment centered on foundational rigor, interdisciplinary study, and flexible curriculum pathways. This portal provides access to academic calendars, programme structures, regulations, and administrative services.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 2. Featured Academic Calendar (Signature Improvement) ── -->
+    <section id="academic-calendar" class="section" style="padding-block: var(--space-3) var(--space-6);">
+      <div class="container">
+        <header class="section__header" style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3);">
+          <div>
+            <h2 class="section__title">Upcoming Academic Dates</h2>
+            <p class="section__description">Key dates for the Monsoon 2026 semester.</p>
+          </div>
+          <a href="#" class="info-card__link" style="font-size: var(--font-size-small);">
+            View full academic calendar
+            <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+          </a>
+        </header>
+
+          <ol class="timeline">
+            <li class="timeline__item">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <div class="timeline__content">
+                <div class="featured-centerpiece__main">
+                  <time class="timeline__date" datetime="2026-08-01">August 01, 2026</time>
+                  <p class="timeline__event">Monsoon Semester Registration &amp; Enrollment</p>
+                  <p class="timeline__detail">Mandatory online course registration and fee fulfillment for all continuing and incoming students.</p>
+                </div>
+                <div class="featured-centerpiece__meta">
+                  <span class="badge badge--registration">Registration</span>
+                  <span class="text-caption">Monsoon 2026</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <div class="timeline__content">
+                <div class="featured-centerpiece__main">
+                  <time class="timeline__date" datetime="2026-08-15">August 15, 2026</time>
+                  <p class="timeline__event">Independence Day</p>
+                  <p class="timeline__detail">Institutional holiday and official campus observance.</p>
+                </div>
+                <div class="featured-centerpiece__meta">
+                  <span class="badge badge--holiday">Holiday</span>
+                  <span class="text-caption">All Institute</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <div class="timeline__content">
+                <div class="featured-centerpiece__main">
+                  <time class="timeline__date" datetime="2026-09-20">September 20 – September 26, 2026</time>
+                  <p class="timeline__event">Mid-Semester Examination Week</p>
+                  <p class="timeline__detail">Formal examination period for all undergraduate and postgraduate academic courses.</p>
+                </div>
+                <div class="featured-centerpiece__meta">
+                  <span class="badge badge--examination">Examination</span>
+                  <span class="text-caption">Monsoon 2026</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <span class="timeline__node" aria-hidden="true"></span>
+              <div class="timeline__content">
+                <div class="featured-centerpiece__main">
+                  <time class="timeline__date" datetime="2026-10-05">October 05, 2026</time>
+                  <p class="timeline__event">Foundation Programme &amp; Academic Symposium</p>
+                  <p class="timeline__detail">Interdisciplinary student colloquiums and foundational curriculum project showcases.</p>
+                </div>
+                <div class="featured-centerpiece__meta">
+                  <span class="badge badge--foundation">Foundation Programme</span>
+                  <span class="text-caption">Monsoon 2026</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </div>
+    </section>
+
+    <!-- ── 4. Academic Programmes ── -->
+    <section id="academic-programmes" class="section" style="padding-block: var(--space-6) var(--space-5);">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Academic Programmes</h2>
+          <p class="section__description">Formal degree structures across engineering, sciences, humanities, and social sciences.</p>
+        </header>
+
+        <div class="grid-3">
+          <!-- Undergraduate -->
+          <article class="info-card">
+            <div class="info-card__icon" aria-hidden="true">
+              <i data-lucide="book-open" class="icon"></i>
+            </div>
+            <h3 class="info-card__title">Undergraduate Programmes</h3>
+            <div class="info-card__description mb-4">
+              <ul class="resource-list">
+                <li><a href="#" class="resource-list__link"><span>B.Tech (Bachelor of Technology)</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>B.Tech – M.Tech Dual Degree</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Minors &amp; Honors Curriculum</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Non-Degree &amp; Visiting Students</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+              </ul>
+            </div>
+            <a href="#" class="info-card__link">
+              View undergraduate curricula
+              <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Postgraduate -->
+          <article class="info-card">
+            <div class="info-card__icon" aria-hidden="true">
+              <i data-lucide="layers" class="icon"></i>
+            </div>
+            <h3 class="info-card__title">Postgraduate Programmes</h3>
+            <div class="info-card__description mb-4">
+              <ul class="resource-list">
+                <li><a href="#" class="resource-list__link"><span>M.Tech (Master of Technology)</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>M.Sc. (Master of Science)</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>M.A. in Society and Culture</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>PG Diploma &amp; Specializations</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+              </ul>
+            </div>
+            <a href="#" class="info-card__link">
+              View postgraduate structures
+              <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Doctoral -->
+          <article class="info-card">
+            <div class="info-card__icon" aria-hidden="true">
+              <i data-lucide="graduation-cap" class="icon"></i>
+            </div>
+            <h3 class="info-card__title">Doctoral Studies (Ph.D.)</h3>
+            <div class="info-card__description mb-4">
+              <ul class="resource-list">
+                <li><a href="#" class="resource-list__link"><span>Ph.D. in Engineering Disciplines</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Ph.D. in Sciences &amp; Mathematics</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Ph.D. in Humanities &amp; Social Sciences</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Continuing Education / QIP Ph.D.</span> <i data-lucide="chevron-right" class="icon"></i></a></li>
+              </ul>
+            </div>
+            <a href="#" class="info-card__link">
+              View doctoral policies &amp; guidelines
+              <i data-lucide="arrow-right" class="icon" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. Academic Affairs ── -->
+    <section id="academic-affairs" class="section" style="padding-block: var(--space-5) var(--space-6);">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Academic Affairs &amp; Regulations</h2>
+          <p class="section__description">Institutional rules, student handbooks, senate ordinances, and official administrative forms.</p>
+        </header>
+
+        <div class="grid-3">
+          <!-- Regulations -->
+          <article class="info-card" style="justify-content: flex-start;">
+            <h3 class="info-card__title" style="font-size: var(--font-size-h4); border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); margin-bottom: var(--space-3);">Rules &amp; Ordinances</h3>
+            <div class="info-card__description" style="margin-bottom: 0;">
+              <ul class="resource-list">
+                <li><a href="#" class="resource-list__link"><span>Senate Ordinances &amp; Regulations</span> <i data-lucide="file-text" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Undergraduate Academic Rules</span> <i data-lucide="file-text" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Postgraduate Academic Rules</span> <i data-lucide="file-text" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Doctoral Degree Requirements</span> <i data-lucide="file-text" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Academic Integrity Policy</span> <i data-lucide="file-text" class="icon"></i></a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Handbooks -->
+          <article class="info-card" style="justify-content: flex-start;">
+            <h3 class="info-card__title" style="font-size: var(--font-size-h4); border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); margin-bottom: var(--space-3);">Student &amp; Faculty Handbooks</h3>
+            <div class="info-card__description" style="margin-bottom: 0;">
+              <ul class="resource-list">
+                <li><a href="#" class="resource-list__link"><span>Undergraduate Student Handbook</span> <i data-lucide="download" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Postgraduate Student Handbook</span> <i data-lucide="download" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Faculty Handbook on Curriculum</span> <i data-lucide="download" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Thesis Formatting Guidelines</span> <i data-lucide="download" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Library &amp; Computing Resources</span> <i data-lucide="download" class="icon"></i></a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Forms -->
+          <article class="info-card" style="justify-content: flex-start;">
+            <h3 class="info-card__title" style="font-size: var(--font-size-h4); border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); margin-bottom: var(--space-3);">Administrative Forms &amp; Services</h3>
+            <div class="info-card__description" style="margin-bottom: 0;">
+              <ul class="resource-list">
+                <li><a href="#" class="resource-list__link"><span>Course Add / Drop Request Form</span> <i data-lucide="external-link" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Semester Withdrawal &amp; Leave Form</span> <i data-lucide="external-link" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Transcript &amp; Certificate Request</span> <i data-lucide="external-link" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Financial Aid &amp; Scholarship Forms</span> <i data-lucide="external-link" class="icon"></i></a></li>
+                <li><a href="#" class="resource-list__link"><span>Academic Affairs Office Directory</span> <i data-lucide="external-link" class="icon"></i></a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Departments Quick Anchor ── -->
+    <section id="departments" class="section" style="padding-block: var(--space-6) var(--space-7);">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Academic Departments &amp; Centers</h2>
+          <p class="section__description">Explore academic disciplines, faculty laboratories, and interdisciplinary research centers.</p>
+        </header>
+        <div class="flex flex-wrap gap-4 flex-center">
+          <a href="#" class="btn btn--secondary btn--pill">Chemical Engineering</a>
+          <a href="#" class="btn btn--secondary btn--pill">Chemistry</a>
+          <a href="#" class="btn btn--secondary btn--pill">Civil Engineering</a>
+          <a href="#" class="btn btn--secondary btn--pill">Computer Science &amp; Engineering</a>
+          <a href="#" class="btn btn--secondary btn--pill">Earth Sciences</a>
+          <a href="#" class="btn btn--secondary btn--pill">Electrical Engineering</a>
+          <a href="#" class="btn btn--secondary btn--pill">Humanities &amp; Social Sciences</a>
+          <a href="#" class="btn btn--secondary btn--pill">Materials Engineering</a>
+          <a href="#" class="btn btn--secondary btn--pill">Mathematics</a>
+          <a href="#" class="btn btn--secondary btn--pill">Mechanical Engineering</a>
+          <a href="#" class="btn btn--secondary btn--pill">Physics</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── 6. Institutional Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__title">Indian Institute of Technology Gandhinagar</p>
+          <p style="color: var(--color-neutral-400); margin-bottom: var(--space-3); line-height: var(--line-height-normal);">
+            Palaj, Gandhinagar<br>
+            Gujarat 382355, India<br>
+            Phone: +91-79-2395-2000
+          </p>
+          <p style="color: var(--color-neutral-400); margin: 0;">
+            Email: academic@iitgn.ac.in
+          </p>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Academics</p>
+          <ul class="site-footer__list">
+            <li><a href="#academic-affairs" class="site-footer__link">Academic Affairs</a></li>
+            <li><a href="#admissions" class="site-footer__link">Admissions</a></li>
+            <li><a href="#academic-programmes" class="site-footer__link">Programmes</a></li>
+            <li><a href="#academic-calendar" class="site-footer__link">Academic Calendar</a></li>
+            <li><a href="#departments" class="site-footer__link">Departments</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Quick Links</p>
+          <ul class="site-footer__list">
+            <li><a href="#" class="site-footer__link">IITGN Main Website</a></li>
+            <li><a href="#" class="site-footer__link">Faculty Directory</a></li>
+            <li><a href="#" class="site-footer__link">Library &amp; Information Services</a></li>
+            <li><a href="#" class="site-footer__link">Research &amp; Development</a></li>
+            <li><a href="#" class="site-footer__link">Campus Amenities</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Portals &amp; Login</p>
+          <ul class="site-footer__list">
+            <li><a href="#" class="site-footer__link">Student Information System (IMS)</a></li>
+            <li><a href="#" class="site-footer__link">Faculty Portal</a></li>
+            <li><a href="#" class="site-footer__link">Online Admissions Portal</a></li>
+            <li><a href="#" class="site-footer__link">Webmail Login</a></li>
+            <li><a href="#" class="site-footer__link">Moodle / Course Management</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Indian Institute of Technology Gandhinagar. All rights reserved.</p>
+        <p>Designed under the Foundation Programme Web Design Project &middot; Evolution, not Revolution.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/components.js"></script>
 </body>
 </html>

@@ -79,7 +79,7 @@
   --grid-gap: var(--space-4);
 
   /* ── Border Radius ── */
-  --radius: 0.75rem; /* 12px */
+  --radius: 0.375rem; /* 6px */
 
   /* ── Elevation ── */
   --shadow-none: none;
