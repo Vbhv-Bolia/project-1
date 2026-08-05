@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Affairs | IIT Gandhinagar</title>
+  <meta name="description" content="Official Academic Affairs hub for IIT Gandhinagar. Access programmes, regulations, calendars, and student opportunities.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    /* Strict Institutional Typography & Spacing for Thematic Pillars */
+    .pillar-layout {
+      display: grid;
+      gap: var(--space-7);
+      grid-template-columns: 1.25fr 1fr 1fr;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .pillar-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+      }
+    }
+
+    .pillar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .pillar__header {
+      border-top: 3px solid var(--color-primary);
+      padding-top: var(--space-2);
+      margin-bottom: var(--space-1);
+    }
+
+    .pillar__number {
+      font-size: var(--font-size-caption);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      font-weight: 600;
+      display: block;
+      margin-bottom: var(--space-1);
+    }
+
+    .pillar__title {
+      font-size: var(--font-size-h3);
+      color: var(--color-text);
+      letter-spacing: -0.01em;
+      margin: 0;
+      line-height: var(--line-height-tight);
+    }
+
+    .pillar__desc {
+      font-size: var(--font-size-small);
+      color: var(--color-text-muted);
+      margin-top: var(--space-2);
+      margin-bottom: 0;
+      line-height: var(--line-height-normal);
+    }
+
+    .pillar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .pillar-section__title {
+      font-size: var(--font-size-caption);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      font-weight: 600;
+      margin-bottom: var(--space-3);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: var(--space-2);
+    }
+
+    .pillar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .pillar-list--compact {
+      gap: 0.875rem;
+    }
+
+    .pillar-link {
+      display: block;
+      color: var(--color-text);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+      padding-block: 2px;
+      border-left: 2px solid transparent;
+      padding-left: 0;
+      transition: all 0.15s ease;
+    }
+
+    .pillar-list--compact .pillar-link {
+      font-weight: 500;
+      font-size: var(--font-size-small);
+      line-height: 1.5;
+    }
+
+    .pillar-link:hover {
+      color: var(--color-primary);
+      border-left: 2px solid var(--color-primary);
+      padding-left: var(--space-2);
+    }
+    
+    .pillar-link span {
+      display: inline-block;
+    }
+
+    /* Subtext under links for clarity without bloat */
+    .pillar-link__meta {
+      display: block;
+      font-weight: 400;
+      font-size: var(--font-size-caption);
+      color: var(--color-neutral-500);
+      margin-top: var(--space-1);
+      line-height: 1.45;
+    }
+    
+    .pillar-link:hover .pillar-link__meta {
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Institutional Navigation Bar ── -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="navbar__brand" aria-label="IIT Gandhinagar Academics Home">
+        <span class="navbar__logo-box" aria-hidden="true">IITGN</span>
+        <div class="navbar__title">
+          <span class="navbar__institute">IIT Gandhinagar</span>
+          <span class="navbar__portal">Academics</span>
+        </div>
+      </a>
+      <nav aria-label="Primary Academics Navigation">
+        <ul class="navbar__nav">
+          <li><a href="index.html" class="navbar__link">Academics Home</a></li>
+          <li><a href="academic-affairs.html" class="navbar__link navbar__link--active" aria-current="page">Academic Affairs</a></li>
+          <li><a href="admissions.html" class="navbar__link">Admissions</a></li>
+          <li><a href="programmes.html" class="navbar__link">Programmes</a></li>
+          <li><a href="calendar.html" class="navbar__link">Calendar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Page Banner ── -->
+  <div class="page-banner">
+    <div class="container">
+      <p class="page-banner__text">Academics Portal &middot; Academic Affairs &middot; Indian Institute of Technology Gandhinagar</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ── Hero Section ── -->
+    <section class="section" style="padding-block: var(--space-7) var(--space-5); border-bottom: 1px solid var(--color-border); margin-bottom: var(--space-6);">
+      <div class="container">
+        <h1 style="font-size: var(--font-size-h1); letter-spacing: -0.02em; margin-bottom: var(--space-3); max-width: 20ch;">
+          Academic Affairs
+        </h1>
+        <p class="section__description" style="max-width: 65ch; color: var(--color-text-muted); font-size: var(--font-size-lead); line-height: var(--line-height-relaxed); margin-bottom: 0;">
+          The institutional hub for academic governance and curriculum administration at IIT Gandhinagar. Explore educational structures, regulatory handbooks, scheduling registries, and student recognition.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Thematic Pillars (Hub & Spoke Architecture) ── -->
+    <section class="section" style="padding-bottom: var(--space-7);">
+      <div class="container">
+        <div class="pillar-layout">
+          
+          <!-- Pillar I: The Academic Framework -->
+          <article class="pillar">
+            <header class="pillar__header">
+              <span class="pillar__number">Pillar 01</span>
+              <h2 class="pillar__title">The Academic Framework</h2>
+              <p class="pillar__desc">Formal degree pathways, curricular structures, and faculty academic departments.</p>
+            </header>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Programmes of Study</h3>
+              <ul class="pillar-list" role="list">
+                <li>
+                  <a href="programmes.html" class="pillar-link">
+                    Undergraduate Degrees (B.Tech)
+                    <span class="pillar-link__meta">Bachelor of Technology & Dual Degree structures</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="programmes.html" class="pillar-link">
+                    Postgraduate Specializations (M.Tech, M.Sc, M.A.)
+                    <span class="pillar-link__meta">Advanced engineering, sciences, and societal studies</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="programmes.html" class="pillar-link">
+                    Doctoral Studies (Ph.D.)
+                    <span class="pillar-link__meta">Research methodologies and dissertation requirements</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="programmes.html" class="pillar-link">
+                    Non-Degree & Visiting Students
+                    <span class="pillar-link__meta">Semester exchange and specialized research internships</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Academic Departments</h3>
+              <ul class="pillar-list pillar-list--compact" role="list">
+                <li><a href="programmes.html" class="pillar-link">Biological Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Chemical Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Chemistry</a></li>
+                <li><a href="programmes.html" class="pillar-link">Civil Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Computer Science & Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Earth Sciences</a></li>
+                <li><a href="programmes.html" class="pillar-link">Electrical Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Humanities & Social Sciences</a></li>
+                <li><a href="programmes.html" class="pillar-link">Materials Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Mathematics</a></li>
+                <li><a href="programmes.html" class="pillar-link">Mechanical Engineering</a></li>
+                <li><a href="programmes.html" class="pillar-link">Physics</a></li>
+              </ul>
+            </section>
+          </article>
+
+          <!-- Pillar II: Regulations & Administration -->
+          <article class="pillar">
+            <header class="pillar__header">
+              <span class="pillar__number">Pillar 02</span>
+              <h2 class="pillar__title">Regulations & Administration</h2>
+              <p class="pillar__desc">Institutional governance, official handbooks, academic schedules, and registrar services.</p>
+            </header>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Schedules & Timetables</h3>
+              <ul class="pillar-list" role="list">
+                <li>
+                  <a href="calendar.html" class="pillar-link">
+                    Master Academic Calendar
+                    <span class="pillar-link__meta">Official institute schedule for Monsoon and Winter semesters</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Class Timetables
+                    <span class="pillar-link__meta">Room allocations and slot structures</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Examination Schedules
+                    <span class="pillar-link__meta">Mid-semester and terminal examination dates</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Rules & Ordinances</h3>
+              <ul class="pillar-list" role="list">
+                <li>
+                  <a href="#" class="pillar-link">
+                    Senate Ordinances & Regulations
+                    <span class="pillar-link__meta">Statutory frameworks governing academic evaluation</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Undergraduate Student Handbook
+                    <span class="pillar-link__meta">Curriculum rules, grading system, and graduation norms</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Postgraduate & Doctoral Handbook
+                    <span class="pillar-link__meta">Advanced credits, thesis evaluation, and defense protocols</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Academic Integrity Charter
+                    <span class="pillar-link__meta">Code of conduct regarding plagiarism and examination ethics</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Administrative Services</h3>
+              <ul class="pillar-list pillar-list--compact" role="list">
+                <li><a href="#" class="pillar-link">Course Add / Drop Request Form</a></li>
+                <li><a href="#" class="pillar-link">Semester Leave & Withdrawal Protocols</a></li>
+                <li><a href="#" class="pillar-link">Official Transcript & Certificate Issuance</a></li>
+                <li><a href="#" class="pillar-link">Bonafide Student Verification</a></li>
+                <li><a href="#" class="pillar-link">Academic Affairs Office Directory</a></li>
+              </ul>
+            </section>
+          </article>
+
+          <!-- Pillar III: Enrichment & Excellence -->
+          <article class="pillar">
+            <header class="pillar__header">
+              <span class="pillar__number">Pillar 03</span>
+              <h2 class="pillar__title">Enrichment & Excellence</h2>
+              <p class="pillar__desc">Curriculum flexibility, interdisciplinary research pathways, and academic honors.</p>
+            </header>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Learning Opportunities</h3>
+              <ul class="pillar-list" role="list">
+                <li>
+                  <a href="#" class="pillar-link">
+                    Foundation Programme
+                    <span class="pillar-link__meta">Five-week immersion in teamwork, creativity, and ethics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Minors & Honors Curriculum
+                    <span class="pillar-link__meta">Supplementary interdisciplinary disciplinary depth</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Undergraduate Research (SRIP)
+                    <span class="pillar-link__meta">Summer Research Internship Programme & lab immersions</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Overseas Semester & Exchange
+                    <span class="pillar-link__meta">Global partnerships and academic credit transfer norms</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Project-Based & Peer Learning
+                    <span class="pillar-link__meta">Hands-on engineering synthesis and study circles</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="pillar-section">
+              <h3 class="pillar-section__title">Student Recognition</h3>
+              <ul class="pillar-list" role="list">
+                <li>
+                  <a href="#" class="pillar-link">
+                    Dean's List of Academic Excellence
+                    <span class="pillar-link__meta">Semester-wise recognition of high academic merit (CPI &gt; 8.5)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Institute Medals & Convocation Awards
+                    <span class="pillar-link__meta">President's Gold Medal, Director's Gold Medal, and domain prizes</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Merit-cum-Means Scholarships
+                    <span class="pillar-link__meta">Tuition fee support and institutional research stipends</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pillar-link">
+                    Student Publication & Travel Grants
+                    <span class="pillar-link__meta">Financial support for presenting research at international forums</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Institutional Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__title">Indian Institute of Technology Gandhinagar</p>
+          <p style="color: var(--color-neutral-400); margin-bottom: var(--space-3); line-height: var(--line-height-normal);">
+            Palaj, Gandhinagar<br>
+            Gujarat 382355, India<br>
+            Phone: +91-79-2395-2000
+          </p>
+          <p style="color: var(--color-neutral-400); margin: 0;">
+            Email: academic@iitgn.ac.in
+          </p>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Academics</p>
+          <ul class="site-footer__list">
+            <li><a href="academic-affairs.html" class="site-footer__link">Academic Affairs</a></li>
+            <li><a href="admissions.html" class="site-footer__link">Admissions</a></li>
+            <li><a href="programmes.html" class="site-footer__link">Programmes</a></li>
+            <li><a href="calendar.html" class="site-footer__link">Academic Calendar</a></li>
+            <li><a href="#" class="site-footer__link">Departments</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Quick Links</p>
+          <ul class="site-footer__list">
+            <li><a href="#" class="site-footer__link">IITGN Main Website</a></li>
+            <li><a href="#" class="site-footer__link">Faculty Directory</a></li>
+            <li><a href="#" class="site-footer__link">Library &amp; Information Services</a></li>
+            <li><a href="#" class="site-footer__link">Research &amp; Development</a></li>
+            <li><a href="#" class="site-footer__link">Campus Amenities</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Portals &amp; Login</p>
+          <ul class="site-footer__list">
+            <li><a href="#" class="site-footer__link">Student Information System (IMS)</a></li>
+            <li><a href="#" class="site-footer__link">Faculty Portal</a></li>
+            <li><a href="#" class="site-footer__link">Online Admissions Portal</a></li>
+            <li><a href="#" class="site-footer__link">Webmail Login</a></li>
+            <li><a href="#" class="site-footer__link">Moodle / Course Management</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Indian Institute of Technology Gandhinagar. All rights reserved.</p>
+        <p>Designed under the Foundation Programme Web Design Project &middot; Evolution, not Revolution.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/components.js"></script>
+</body>
+</html>
