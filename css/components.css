@@ -1,9 +1,9 @@
-/* PROJECT-1 Component Library
+﻿/* PROJECT-1 Component Library
    Source: COMPONENT_LIBRARY.md */
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BUTTONS
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .btn {
   display: inline-flex;
@@ -101,9 +101,9 @@
   padding-inline: var(--space-3);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    INFORMATION CARD
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .info-card {
   display: flex;
@@ -185,9 +185,9 @@
   transform: translateX(2px);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DEPARTMENT CARD
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .dept-card {
   display: flex;
@@ -265,9 +265,9 @@
   transform: translateX(4px);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TIMELINE
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .timeline {
   position: relative;
@@ -354,9 +354,9 @@
   color: var(--color-text-muted);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ACCORDION
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .accordion {
   border: 1px solid var(--color-border);
@@ -439,9 +439,9 @@
   margin: 0;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TABLE
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .table-wrapper {
   overflow-x: auto;
@@ -505,9 +505,9 @@
   border-bottom-right-radius: 0;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BADGES
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .badge {
   display: inline-flex;
@@ -555,9 +555,9 @@
   background: var(--color-error-subtle);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FORM INPUTS
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .form-group {
   margin-bottom: var(--space-4);
@@ -672,9 +672,9 @@
   cursor: pointer;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ICON HELPER
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .icon {
   display: inline-block;
@@ -684,9 +684,9 @@
   fill: none;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    PAGE BANNER (Institutional Context Bar)
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .page-banner {
   background: var(--color-neutral-50);
@@ -701,9 +701,9 @@
   letter-spacing: 0.02em;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    NAVIGATION BAR & HEADER
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .site-header {
   background: var(--color-primary);
@@ -803,9 +803,9 @@
   font-weight: var(--font-weight-semibold);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FEATURED CENTERPIECE (Academic Calendar)
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .featured-centerpiece {
   background: var(--color-background);
@@ -845,9 +845,9 @@
   margin-bottom: var(--space-5);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESOURCE LISTS (Academic Affairs & Programmes)
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .resource-list {
   list-style: none;
@@ -889,9 +889,9 @@
   transform: translateX(2px);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    INSTITUTIONAL FOOTER
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .site-footer {
   background: var(--color-neutral-900);
@@ -956,9 +956,9 @@
   margin: 0;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CALENDAR COMPONENTS
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Semester Snapshot */
 .snapshot-timeline {
@@ -1369,9 +1369,9 @@
   border-top: 1px solid var(--color-border);
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ADMISSIONS COMPONENTS
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Programme Comparison Table */
 .comparison-table-wrapper {
@@ -1388,7 +1388,7 @@
   table-layout: fixed;
 }
 
-/* Column widths — keeps each column stable */
+/* Column widths â€” keeps each column stable */
 .comparison-table colgroup col:nth-child(1) { width: 28%; }
 .comparison-table colgroup col:nth-child(2) { width: 13%; }
 .comparison-table colgroup col:nth-child(3) { width: 16%; }
@@ -1429,7 +1429,7 @@
   color: var(--color-text-muted);
 }
 
-/* Programme name — primary visual element */
+/* Programme name â€” primary visual element */
 .comparison-table tbody td:first-child {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
@@ -1437,14 +1437,14 @@
   white-space: nowrap;
 }
 
-/* Duration — compact, strong */
+/* Duration â€” compact, strong */
 .comparison-table tbody td:nth-child(2) {
   font-weight: var(--font-weight-medium);
   color: var(--color-neutral-700);
   white-space: nowrap;
 }
 
-/* Admission route — allow natural wrapping for longer values */
+/* Admission route â€” allow natural wrapping for longer values */
 .comparison-table tbody td:last-child {
   font-weight: var(--font-weight-medium);
   color: var(--color-neutral-700);
@@ -1529,23 +1529,23 @@
   z-index: 90;
 }
 
-/* ══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DEPARTMENTS & PROGRAMMES COMPONENTS
-   ══════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* Domain anchor links in page header */
+/* Domain anchor links */
 .domain-anchors {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-2);
-  font-size: var(--font-size-caption);
+  gap: 0.5rem;
+  font-size: 0.875rem;
 }
 
 .domain-anchor {
-  color: var(--color-text-muted);
+  color: var(--color-neutral-600);
   text-decoration: none;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   transition: color var(--duration) var(--ease);
 }
 
@@ -1559,115 +1559,146 @@
   user-select: none;
 }
 
-/* Domain section */
+/* â”€â”€ Domain section: chapter-level break â”€â”€ */
 .dept-domain {
-  padding-block: var(--space-6) var(--space-6);
+  padding-top: 7rem; /* clear visual pause before each chapter */
+  padding-bottom: 1rem;
 }
 
 .dept-domain--last {
-  margin-bottom: var(--space-7);
+  padding-bottom: 6rem;
 }
 
+/* Domain chapter heading */
 .dept-domain__heading {
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-neutral-900);
-  margin-bottom: var(--space-5);
-  letter-spacing: -0.01em;
-  padding-bottom: var(--space-3);
-  border-bottom: 2px solid var(--color-neutral-900);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4b5563;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  border-left: 3px solid #1a4480;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-/* Departments Grid */
+/* Domain chapter metadata summary */
+.dept-domain__meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 4rem 1.25rem;
+}
+
+/* â”€â”€ Departments Grid â”€â”€ */
 .dept-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--space-7) var(--space-6);
+  grid-template-columns: 1fr;
+  row-gap: 3.5rem;
 }
 
-/* Department Panel */
+/* â”€â”€ Department Panel (no border â€” whitespace separates) â”€â”€ */
 .dept-panel {
   display: flex;
   flex-direction: column;
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--color-border);
+  padding-block: 2rem;
+  padding-bottom: 3.5rem; /* increased space after link to next department */
 }
 
-.dept-panel__heading {
-  font-size: var(--font-size-h4);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-neutral-900);
-  margin-bottom: var(--space-4);
-  line-height: var(--line-height-tight);
+
+/* Department title --- anchors the block, flush left */
+.dept-panel__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
 }
 
-.dept-panel__section {
-  margin-bottom: var(--space-4);
+/* Short accent divider below title */
+.dept-panel__divider {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 0 0 1.25rem 0;
+  width: 64px;
+  display: block;
 }
 
-.dept-panel__section:last-of-type {
-  margin-bottom: var(--space-5);
+/* Degrees --- indented 20px, body weight */
+.dept-panel__degrees {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 2.5rem 20px;
+  line-height: 1.5;
 }
 
-.dept-panel__label {
+/* Research focus wrapper --- indented 20px */
+.dept-panel__focus {
+  margin: 0 0 2.5rem 20px;
+}
+
+/* RESEARCH FOCUS caption */
+.dept-panel__focus-label {
+  display: block;
   font-size: 10px;
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-neutral-400);
+  font-weight: 600;
+  color: #9ca3af;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: var(--space-1);
+  letter-spacing: 0.15em;
+  margin: 0 0 0.5rem 0;
 }
 
-.dept-panel__text {
-  font-size: var(--font-size-small);
-  color: var(--color-neutral-900);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
+/* Research topics text */
+.dept-panel__focus-text {
+  font-size: 0.9375rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* Inline tags for focus areas */
-.dept-panel__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
+/* Faculty/lab metadata --- indented, muted */
+.dept-panel__stats {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin: 0 0 2.5rem 20px;
 }
 
-.dept-panel__tag {
-  font-size: var(--font-size-caption);
-  color: var(--color-neutral-600);
-  background: var(--color-neutral-50);
-  border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius);
-  padding: 2px 8px;
-}
-
-.dept-panel__footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.dept-panel__meta {
-  font-size: var(--font-size-caption);
-  color: var(--color-neutral-500);
-}
-
+/* Action link --- indented, final element */
 .dept-panel__link {
-  display: inline-flex;
-  align-items: center;
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a4480;
   text-decoration: none;
-  transition: color var(--duration) var(--ease);
+  margin-left: 20px;
+  display: inline-block;
 }
 
 .dept-panel__link:hover {
-  color: var(--color-primary-dark);
+  color: #133566;
   text-decoration: underline;
 }
 
+
+/* Interdisciplinary simplified layout */
+.dept-interdisciplinary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+.dept-interdisciplinary h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+.dept-interdisciplinary p {
+  font-size: 0.9375rem;
+  color: #374151;
+  line-height: 1.6;
+}
+.dept-interdisciplinary .dept-panel__link {
+  margin-left: 0;
+  margin-top: 1rem;
+}
