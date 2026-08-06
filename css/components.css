@@ -1,4 +1,4 @@
-﻿/* PROJECT-1 Component Library
+/* PROJECT-1 Component Library
    Source: COMPONENT_LIBRARY.md */
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
@@ -1702,3 +1702,115 @@
   margin-left: 0;
   margin-top: 1rem;
 }
+
+
+/* ══════════════════════════════════════════
+   PROGRAMME COMPARISON TABLE
+   ══════════════════════════════════════════ */
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: calc(var(--radius) * 2);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-2);
+  margin-top: var(--space-4);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-small);
+  background: var(--color-background);
+}
+
+/* ── Header ── */
+.comparison-table thead tr {
+  background: var(--color-primary);
+}
+
+.comparison-table thead th {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-inverse);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: none;
+}
+
+.comparison-table thead th:first-child {
+  border-radius: calc(var(--radius) * 2) 0 0 0;
+}
+.comparison-table thead th:last-child {
+  border-radius: 0 calc(var(--radius) * 2) 0 0;
+}
+
+/* ── Body rows ── */
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--duration) var(--ease);
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Zebra stripe */
+.comparison-table tbody tr:nth-child(even) {
+  background-color: var(--color-neutral-50);
+}
+
+.comparison-table tbody tr:hover {
+  background-color: var(--color-primary-subtle);
+}
+
+/* ── Cells ── */
+.comparison-table tbody td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text);
+  vertical-align: middle;
+  line-height: var(--line-height-normal);
+}
+
+/* First column – programme name – bold + primary colour */
+.comparison-table tbody td:first-child {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* ── Route badges ── */
+.route-badge {
+  display: inline-block;
+  padding: 0.2em 0.65em;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+  white-space: nowrap;
+}
+
+/* Duration chip */
+.duration-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-neutral-700);
+}
+
+/* Intake tag */
+.intake-tag {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: var(--radius);
+  font-size: 0.8125rem;
+  background: var(--color-accent-subtle);
+  color: var(--color-accent-dark);
+  font-weight: var(--font-weight-medium);
+}
+

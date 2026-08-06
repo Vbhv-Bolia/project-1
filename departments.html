@@ -13,7 +13,96 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css?v=2">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <style>
+    /* Monochrome typographic line accents for department headings */
+    .dept-panel__icon {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2px;
+      color: #4b5563;
+      display: inline-block;
+      vertical-align: -2px;
+      margin-right: 0.625rem;
+    }
+
+    /* Guaranteed chapter-level whitespace separation between domain sections */
+    .dept-domain {
+      padding-top: 7rem !important;
+      padding-bottom: 2rem !important;
+    }
+
+    .dept-domain--last {
+      padding-bottom: 6rem !important;
+    }
+
+    /* Enforce robust separation between individual departments regardless of grid or block layout */
+    .dept-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      row-gap: 5rem !important;
+    }
+
+    .dept-panel:not(:last-child) {
+      margin-bottom: 5rem !important;
+      padding-bottom: 2rem !important;
+    }
+
+    /* Enforce robust separation between individual interdisciplinary programmes */
+    .dept-interdisciplinary {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 5rem !important;
+      padding-bottom: 5rem !important;
+    }
+
+    .dept-interdisciplinary > div:not(:last-child) {
+      margin-bottom: 5rem !important;
+    }
+
+    /* Placeholder text indicating separation space for future departmental images */
+    .dept-image-space {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      margin-top: 3.5rem;
+      margin-left: 20px;
+      user-select: none;
+    }
+
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: none;
+    }
+
+    .scroll-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-to-top:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +110,7 @@
     <div class="container">
       <div class="navbar">
         <a href="index.html" class="navbar__brand">
-          <div class="navbar__logo-box">IITGN</div>
+          <img src="assets/logo.png" alt="IIT Gandhinagar Logo" class="navbar__logo-image" style="height: 48px; width: auto; background-color: white; border-radius: var(--radius); padding: 2px;">
           <div class="navbar__title">
             <span class="navbar__institute">Indian Institute of Technology Gandhinagar</span>
             <span class="navbar__portal">Academics</span>
@@ -40,25 +129,43 @@
     </div>
   </header>
 
-  <nav class="programme-anchors" aria-label="Jump to domain">
-    <div class="container" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-      <a href="#engineering" class="domain-anchor">Engineering &amp; Technology</a>
-      <span class="domain-anchor__sep">&middot;</span>
-      <a href="#sciences" class="domain-anchor">Sciences</a>
-      <span class="domain-anchor__sep">&middot;</span>
-      <a href="#humanities" class="domain-anchor">Humanities &amp; Social Sciences</a>
-      <span class="domain-anchor__sep">&middot;</span>
-      <a href="#earth" class="domain-anchor">Earth &amp; Environment</a>
-      <span class="domain-anchor__sep">&middot;</span>
-      <a href="#interdisciplinary" class="domain-anchor">Interdisciplinary</a>
-    </div>
-  </nav>
+  <style>
+    /* ══════════════════════════════════════════
+       DEPARTMENT INDEX NAVIGATION
+       ══════════════════════════════════════════ */
+    .programme-anchors {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-3) 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .programme-anchors .container {
+      display: flex; 
+      gap: var(--space-2); 
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
+  </style>
   <div class="page-banner">
     <div class="container">
       <p class="page-banner__text">Academics Portal &middot; Departments &amp; Programmes &middot; Indian Institute of Technology Gandhinagar</p>
     </div>
   </div>
+
+  <nav class="programme-anchors" aria-label="Jump to domain">
+    <div class="container">
+      <a href="#engineering" class="btn btn--secondary btn--pill">Engineering &amp; Technology</a>
+      <a href="#sciences" class="btn btn--secondary btn--pill">Sciences</a>
+      <a href="#humanities" class="btn btn--secondary btn--pill">Humanities &amp; Social Sciences</a>
+      <a href="#earth" class="btn btn--secondary btn--pill">Earth &amp; Environment</a>
+      <a href="#interdisciplinary" class="btn btn--secondary btn--pill">Interdisciplinary</a>
+      <a href="#centres" class="btn btn--secondary btn--pill">Research Centres &amp; Institutes</a>
+    </div>
+  </nav>
 
   <main>
 
@@ -82,7 +189,7 @@
         <div class="dept-grid">
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Computer Science &amp; Engineering</h3>
+            <h3 class="dept-panel__name"><i data-lucide="cpu" class="dept-panel__icon" aria-hidden="true"></i><span>Computer Science &amp; Engineering</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">B.Tech &middot; M.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -91,10 +198,11 @@
             </div>
             <p class="dept-panel__stats">24 faculty &middot; 8 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Computer Science & Engineering">Explore Computer Science & Engineering &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Electrical Engineering</h3>
+            <h3 class="dept-panel__name"><i data-lucide="zap" class="dept-panel__icon" aria-hidden="true"></i><span>Electrical Engineering</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">B.Tech &middot; M.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -103,10 +211,11 @@
             </div>
             <p class="dept-panel__stats">28 faculty &middot; 12 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Electrical Engineering">Explore Electrical Engineering &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Mechanical Engineering</h3>
+            <h3 class="dept-panel__name"><i data-lucide="settings" class="dept-panel__icon" aria-hidden="true"></i><span>Mechanical Engineering</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">B.Tech &middot; M.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -115,10 +224,11 @@
             </div>
             <p class="dept-panel__stats">32 faculty &middot; 14 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Mechanical Engineering">Explore Mechanical Engineering &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Chemical Engineering</h3>
+            <h3 class="dept-panel__name"><i data-lucide="test-tubes" class="dept-panel__icon" aria-hidden="true"></i><span>Chemical Engineering</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">B.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -127,10 +237,11 @@
             </div>
             <p class="dept-panel__stats">18 faculty &middot; 6 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Chemical Engineering">Explore Chemical Engineering &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Civil Engineering</h3>
+            <h3 class="dept-panel__name"><i data-lucide="building-2" class="dept-panel__icon" aria-hidden="true"></i><span>Civil Engineering</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">B.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -139,10 +250,11 @@
             </div>
             <p class="dept-panel__stats">22 faculty &middot; 9 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Civil Engineering">Explore Civil Engineering &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Materials Engineering</h3>
+            <h3 class="dept-panel__name"><i data-lucide="layers" class="dept-panel__icon" aria-hidden="true"></i><span>Materials Engineering</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">B.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -151,6 +263,7 @@
             </div>
             <p class="dept-panel__stats">16 faculty &middot; 7 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Materials Engineering">Explore Materials Engineering &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
         </div>
@@ -166,7 +279,7 @@
         <div class="dept-grid">
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Chemistry</h3>
+            <h3 class="dept-panel__name"><i data-lucide="flask-conical" class="dept-panel__icon" aria-hidden="true"></i><span>Chemistry</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">MSc &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -175,10 +288,11 @@
             </div>
             <p class="dept-panel__stats">15 faculty &middot; 10 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Chemistry">Explore Chemistry &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Physics</h3>
+            <h3 class="dept-panel__name"><i data-lucide="atom" class="dept-panel__icon" aria-hidden="true"></i><span>Physics</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">MSc &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -187,10 +301,11 @@
             </div>
             <p class="dept-panel__stats">20 faculty &middot; 8 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Physics">Explore Physics &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Mathematics</h3>
+            <h3 class="dept-panel__name"><i data-lucide="sigma" class="dept-panel__icon" aria-hidden="true"></i><span>Mathematics</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">MSc &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -199,6 +314,7 @@
             </div>
             <p class="dept-panel__stats">18 faculty &middot; 2 research centers</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Mathematics">Explore Mathematics &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
         </div>
@@ -214,7 +330,7 @@
         <div class="dept-grid">
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Society &amp; Culture</h3>
+            <h3 class="dept-panel__name"><i data-lucide="book-open" class="dept-panel__icon" aria-hidden="true"></i><span>Society &amp; Culture</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">MA &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -223,6 +339,7 @@
             </div>
             <p class="dept-panel__stats">22 faculty &middot; 3 research centers</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Society & Culture">Explore Society & Culture &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
         </div>
@@ -238,7 +355,7 @@
         <div class="dept-grid">
 
           <article class="dept-panel">
-            <h3 class="dept-panel__name">Earth System Science</h3>
+            <h3 class="dept-panel__name"><i data-lucide="globe" class="dept-panel__icon" aria-hidden="true"></i><span>Earth System Science</span></h3>
             <hr class="dept-panel__divider">
             <p class="dept-panel__degrees">M.Tech &middot; Ph.D.</p>
             <div class="dept-panel__focus">
@@ -247,6 +364,7 @@
             </div>
             <p class="dept-panel__stats">14 faculty &middot; 5 research labs</p>
             <a href="#" class="dept-panel__link" aria-label="Explore Earth System Science">Explore Earth System Science &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </article>
 
         </div>
@@ -254,7 +372,7 @@
     </section>
 
     <!-- DOMAIN 5 — Interdisciplinary -->
-    <section id="interdisciplinary" class="dept-domain dept-domain--last">
+    <section id="interdisciplinary" class="dept-domain">
       <div class="container" style="max-width: var(--max-width-content);">
         <h2 class="dept-domain__heading">Interdisciplinary Programmes (Institute-wide)</h2>
         <p class="dept-domain__meta" style="margin-bottom: 2rem;">The following programmes draw faculty from across all departments.</p>
@@ -266,6 +384,7 @@
             <p style="margin-bottom: 1rem; color: #1f2937; font-weight: 500;">Engineering &middot; Sciences &middot; HSS</p>
             <p>Cross-disciplinary research tailored to student interests across departments.</p>
             <a href="#" class="dept-panel__link">View M.Sc. (Research) details &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </div>
 
           <div>
@@ -273,7 +392,68 @@
             <p style="margin-bottom: 1rem; color: #1f2937; font-weight: 500;">Sciences</p>
             <p>Accelerated research track for highly motivated graduates of the sciences.</p>
             <a href="#" class="dept-panel__link">View Integrated Ph.D. details &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DOMAIN 6 — Research Centres & Institutes -->
+    <section id="centres" class="dept-domain dept-domain--last">
+      <div class="container" style="max-width: var(--max-width-content);">
+        <h2 class="dept-domain__heading">Research Centres &amp; Institutes</h2>
+        <p class="dept-domain__meta">6 interdisciplinary research centres &amp; institutes</p>
+
+        <div class="dept-grid">
+
+          <article class="dept-panel">
+            <h3 class="dept-panel__name">Dr. Kiran C. Patel Centre for Sustainable Development</h3>
+            <hr class="dept-panel__divider">
+            <p style="font-size: 0.9375rem; color: #374151; line-height: 1.6; margin: 0 0 2.5rem 20px;">Advancing interdisciplinary research and global partnerships on sustainable solutions for water, energy, and climate action.</p>
+            <a href="#" class="dept-panel__link" aria-label="Explore Dr. Kiran C. Patel Centre for Sustainable Development">Explore Centre &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
+          </article>
+
+          <article class="dept-panel">
+            <h3 class="dept-panel__name">Archaeological Sciences Centre</h3>
+            <hr class="dept-panel__divider">
+            <p style="font-size: 0.9375rem; color: #374151; line-height: 1.6; margin: 0 0 2.5rem 20px;">Integrating advanced material science, radiometric dating, and digital modeling with Indian archaeological research.</p>
+            <a href="#" class="dept-panel__link" aria-label="Explore Archaeological Sciences Centre">Explore Centre &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
+          </article>
+
+          <article class="dept-panel">
+            <h3 class="dept-panel__name">Centre for Cognitive and Brain Sciences</h3>
+            <hr class="dept-panel__divider">
+            <p style="font-size: 0.9375rem; color: #374151; line-height: 1.6; margin: 0 0 2.5rem 20px;">Fostering rigorous experimental investigation into neural computation, perception, motor control, and neuroergonomics.</p>
+            <a href="#" class="dept-panel__link" aria-label="Explore Centre for Cognitive and Brain Sciences">Explore Centre &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
+          </article>
+
+          <article class="dept-panel">
+            <h3 class="dept-panel__name">Dr. J. M. Kulkarni Centre for Industrial Mathematics</h3>
+            <hr class="dept-panel__divider">
+            <p style="font-size: 0.9375rem; color: #374151; line-height: 1.6; margin: 0 0 2.5rem 20px;">Bridging pure mathematics with complex industrial computational challenges, simulation, and theoretical analysis.</p>
+            <a href="#" class="dept-panel__link" aria-label="Explore Dr. J. M. Kulkarni Centre for Industrial Mathematics">Explore Centre &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
+          </article>
+
+          <article class="dept-panel">
+            <h3 class="dept-panel__name">Centre for Safety Engineering &amp; Institute for Disaster Risk Reduction</h3>
+            <hr class="dept-panel__divider">
+            <p style="font-size: 0.9375rem; color: #374151; line-height: 1.6; margin: 0 0 2.5rem 20px;">Developing rigorous seismic evaluation methodologies, structural fire safety standards, and hazard mitigation frameworks.</p>
+            <a href="#" class="dept-panel__link" aria-label="Explore Centre for Safety Engineering & Institute for Disaster Risk Reduction">Explore Centre &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
+          </article>
+
+          <article class="dept-panel">
+            <h3 class="dept-panel__name">Design Innovation Centre (DIC)</h3>
+            <hr class="dept-panel__divider">
+            <p style="font-size: 0.9375rem; color: #374151; line-height: 1.6; margin: 0 0 2.5rem 20px;">Promoting a culture of frugal engineering, human-centered prototyping, and interdisciplinary industrial design.</p>
+            <a href="#" class="dept-panel__link" aria-label="Explore Design Innovation Centre">Explore Centre &rarr;</a>
+            <div class="dept-image-space">(space for images)</div>
+          </article>
 
         </div>
       </div>
@@ -289,7 +469,32 @@
     </div>
   </footer>
 
+  <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
   <script src="js/components.js"></script>
+  
+  <!-- Scroll to Top Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+      
+      scrollToTopBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>
 
