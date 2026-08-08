@@ -97,10 +97,12 @@
   /* ── Badge category colours ── */
   --badge-registration: #1a4480;
   --badge-registration-bg: #e8eef6;
-  --badge-holiday: #15803d;
-  --badge-holiday-bg: #ecfdf3;
-  --badge-examination: #dc2626;
-  --badge-examination-bg: #fef2f2;
-  --badge-foundation: #e87722;
-  --badge-foundation-bg: #fef3e8;
+  --badge-holiday: #2563eb;
+  --badge-holiday-bg: #dbeafe;
+  --badge-examination: #3b82f6;
+  --badge-examination-bg: #eff6ff;
+  --badge-foundation: #1e3a8a;
+  --badge-foundation-bg: #dbeafe;
+  --badge-academic: #60a5fa;
+  --badge-academic-bg: #eff6ff;
 }
