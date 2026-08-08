@@ -3,7 +3,7 @@
 
 :root {
   /* ── Colour: Primary (IITGN Blue) ── */
-  --color-primary: #1a4480;
+  --color-primary: #163850;
   --color-primary-dark: #133566;
   --color-primary-light: #2d5a9e;
   --color-primary-subtle: #e8eef6;
@@ -94,15 +94,28 @@
   --focus-ring: 0 0 0 3px rgba(26, 68, 128, 0.35);
   --focus-ring-offset: 2px;
 
-  /* ── Badge category colours ── */
-  --badge-registration: #1a4480;
-  --badge-registration-bg: #e8eef6;
-  --badge-holiday: #2563eb;
-  --badge-holiday-bg: #dbeafe;
-  --badge-examination: #3b82f6;
-  --badge-examination-bg: #eff6ff;
-  --badge-foundation: #1e3a8a;
-  --badge-foundation-bg: #dbeafe;
-  --badge-academic: #60a5fa;
-  --badge-academic-bg: #eff6ff;
+  /* ── IITGN Blue Palette (Derived from #163850) ── */
+  --color-blue-900: #163850; /* Dark Navy / Primary */
+  --color-blue-800: #1a4666;
+  --color-blue-700: #215980; /* Medium Slate Blue */
+  --color-blue-600: #2d73a6; /* Muted Blue */
+  --color-blue-500: #3c91cc; /* Soft Blue */
+  --color-blue-100: #dceaf5; /* Pale Blue */
+  --color-blue-50:  #f0f6fa; /* Very Pale Blue */
+
+  /* ── Badge category colours (Monochromatic) ── */
+  --badge-registration: var(--color-blue-900);
+  --badge-registration-bg: var(--color-blue-100);
+  
+  --badge-foundation: var(--color-blue-800);
+  --badge-foundation-bg: var(--color-blue-50);
+  
+  --badge-examination: var(--color-blue-700);
+  --badge-examination-bg: var(--color-blue-100);
+  
+  --badge-academic: var(--color-blue-600);
+  --badge-academic-bg: var(--color-blue-50);
+  
+  --badge-holiday: var(--color-blue-500);
+  --badge-holiday-bg: var(--color-blue-50);
 }

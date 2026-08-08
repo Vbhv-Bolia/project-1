@@ -1374,6 +1374,7 @@
 .dept-domain {
   padding-top: 7rem; /* clear visual pause before each chapter */
   padding-bottom: 1rem;
+  scroll-margin-top: 160px;
 }
 
 .dept-domain--last {
@@ -1382,15 +1383,13 @@
 
 /* Domain chapter heading */
 .dept-domain__heading {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #4b5563;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
   margin-bottom: 0.5rem;
   padding-bottom: 0.75rem;
   padding-left: 1rem;
-  border-left: 3px solid #1a4480;
+  border-left: 3px solid var(--color-primary);
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -1419,11 +1418,16 @@
 
 /* Department title --- anchors the block, flush left */
 .dept-panel__name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #111827;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin: 0 0 0.75rem 0;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 /* Short accent divider below title */
@@ -1498,12 +1502,7 @@
   gap: 3rem;
   margin-top: 1rem;
 }
-.dept-interdisciplinary h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
+
 .dept-interdisciplinary p {
   font-size: 0.9375rem;
   color: #374151;
