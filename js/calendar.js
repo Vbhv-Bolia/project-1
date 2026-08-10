@@ -85,112 +85,103 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 3. Scroll Spy for Timeline
+  // 3. Time-based fill for Snapshot Timeline
   const timelineItems = document.querySelectorAll(".snapshot-timeline__item");
   const progressBar = document.querySelector(".snapshot-timeline__progress-bar");
 
-  function updateScrollSpy() {
-    let currentId = null;
+  function calculateTimeProgress() {
+    if (!progressBar || timelineItems.length < 2) return;
 
-    calendarCards.forEach(card => {
-      if (card.style.display === "none") return;
-      const rect = card.getBoundingClientRect();
-      // 250px is roughly the bottom of the sticky filter bar
-      if (rect.top <= 250) { 
-        currentId = card.id;
+    // We use a simulated "today" for the mock environment, or Date.now() in production
+    // The design shows "TODAY (Aug 04)" for 2026, so let's simulate a date around mid-August
+    // as per the user's request, or just use the system date if it's within the semester.
+    const currentYear = 2026; 
+    let now = new Date();
+    // For demonstration, if we are in 2026, let's use the actual date. 
+    // If not, mock it so the calendar looks nice.
+    if (now.getFullYear() !== 2026) {
+      now = new Date("August 15, 2026");
+    }
+
+    const parsedDates = [];
+    timelineItems.forEach(item => {
+      const dateEl = item.querySelector('.snapshot-timeline__date');
+      if (dateEl) {
+        const text = dateEl.textContent; 
+        const match = text.match(/([a-zA-Z]{3})\s+(\d+)/);
+        if (match) {
+           const d = new Date(`${match[1]} ${match[2]}, ${currentYear}`);
+           parsedDates.push({ date: d, item: item });
+        }
       }
     });
+
+    if (parsedDates.length !== timelineItems.length) return;
+
+    const startTime = parsedDates[0].date.getTime();
+    const endTime = parsedDates[parsedDates.length - 1].date.getTime();
+    const currentTime = now.getTime();
+
+    let percentage = 0;
     
-    // If we haven't scrolled past any, default to the first visible one
-    if (!currentId) {
-      for (const card of calendarCards) {
-        if (card.style.display !== "none") {
-          currentId = card.id;
+    if (currentTime <= startTime) {
+      percentage = 0;
+      parsedDates[0].item.classList.add('snapshot-timeline__item--today');
+    } else if (currentTime >= endTime) {
+      percentage = 100;
+      parsedDates.forEach(p => p.item.classList.add('passed'));
+      parsedDates[parsedDates.length - 1].item.classList.add('snapshot-timeline__item--today');
+    } else {
+      let activeIndex = 0;
+      for (let i = 0; i < parsedDates.length - 1; i++) {
+        const d1 = parsedDates[i].date.getTime();
+        const d2 = parsedDates[i+1].date.getTime();
+        
+        if (currentTime >= d1 && currentTime <= d2) {
+          activeIndex = i;
+          const segmentFraction = (currentTime - d1) / (d2 - d1);
+          const visualStep = 100 / (parsedDates.length - 1);
+          percentage = (activeIndex * visualStep) + (segmentFraction * visualStep);
           break;
         }
       }
+      
+      parsedDates.forEach((p, idx) => {
+        if (idx < activeIndex) {
+          p.item.classList.add('passed');
+          p.item.classList.remove('snapshot-timeline__item--today');
+        } else if (idx === activeIndex) {
+          // If we are exactly between nodes, the previous node is 'today' or 'passed'
+          // We will mark the last passed node as the active/today one
+          p.item.classList.add('snapshot-timeline__item--today');
+          p.item.classList.remove('passed');
+        } else {
+          p.item.classList.remove('passed', 'snapshot-timeline__item--today');
+        }
+      });
     }
 
-    if (currentId) {
-      let activeIndex = -1;
-      
-      timelineItems.forEach((item, index) => {
-        const href = item.getAttribute("href");
-        if (href && href.substring(1) === currentId) {
-          activeIndex = index;
-          item.classList.add("snapshot-timeline__item--today");
-        } else {
-          item.classList.remove("snapshot-timeline__item--today");
-        }
-      });
-
-      timelineItems.forEach((item, index) => {
-        if (index < activeIndex) {
-          item.classList.add("passed");
-        } else {
-          item.classList.remove("passed");
-        }
-      });
-
-      if (progressBar && timelineItems.length > 1 && activeIndex >= 0) {
-        let percentage = (activeIndex / (timelineItems.length - 1)) * 100;
-        
-        // Calculate smooth progress to the next node
-        if (activeIndex < timelineItems.length - 1) {
-          const currentItem = timelineItems[activeIndex];
-          const nextItem = timelineItems[activeIndex + 1];
-          const currentTargetId = currentItem.getAttribute("href")?.substring(1);
-          const nextTargetId = nextItem.getAttribute("href")?.substring(1);
-          
-          const currentCard = currentTargetId ? document.getElementById(currentTargetId) : null;
-          const nextCard = nextTargetId ? document.getElementById(nextTargetId) : null;
-          
-          if (currentCard && nextCard) {
-            const currentTop = currentCard.getBoundingClientRect().top + window.scrollY;
-            const nextTop = nextCard.getBoundingClientRect().top + window.scrollY;
-            
-            const scrollPos = window.scrollY + 250; // Use same threshold as spy
-            
-            if (scrollPos > currentTop && scrollPos < nextTop) {
-              const distance = nextTop - currentTop;
-              const scrolled = scrollPos - currentTop;
-              const fraction = Math.max(0, Math.min(1, scrolled / distance));
-              
-              const stepSize = 100 / (timelineItems.length - 1);
-              percentage += (fraction * stepSize);
-            }
-          }
-        }
-        
-        // Also handle going past the last node
-        if (activeIndex === timelineItems.length - 1) {
-           const currentItem = timelineItems[activeIndex];
-           const currentTargetId = currentItem.getAttribute("href")?.substring(1);
-           const currentCard = currentTargetId ? document.getElementById(currentTargetId) : null;
-           
-           if (currentCard) {
-             const currentTop = currentCard.getBoundingClientRect().top + window.scrollY;
-             const documentHeight = document.documentElement.scrollHeight;
-             const scrollPos = window.scrollY + window.innerHeight; // End of page
-             
-             if (scrollPos > currentTop) {
-                const distance = documentHeight - currentTop;
-                const scrolled = scrollPos - currentTop;
-                const fraction = Math.max(0, Math.min(1, scrolled / distance));
-                
-                // Allow it to completely fill to 100%
-                percentage = 100; // Since it's the last node, it's already at 100%
-             }
-           }
-        }
-
-        progressBar.style.width = `${percentage}%`;
-      }
+    progressBar.style.width = `${percentage}%`;
+    
+    // Update the "TODAY" label to reflect the current mocked date
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const todayLabel = `TODAY (${monthNames[now.getMonth()]} ${String(now.getDate()).padStart(2, '0')})`;
+    
+    // Update the label of the active node to include TODAY
+    parsedDates.forEach(p => {
+       const text = p.item.querySelector('.snapshot-timeline__date').textContent;
+       if (text.includes("TODAY")) {
+         p.item.querySelector('.snapshot-timeline__date').textContent = text.replace(/TODAY \([^\)]+\)/, '').trim();
+       }
+    });
+    
+    const activeItem = document.querySelector('.snapshot-timeline__item--today .snapshot-timeline__date');
+    if (activeItem && !activeItem.textContent.includes("TODAY")) {
+       activeItem.textContent = `TODAY (${activeItem.textContent})`;
     }
   }
 
-  window.addEventListener("scroll", updateScrollSpy, { passive: true });
-  updateScrollSpy();
+  calculateTimeProgress();
 
   // 4. Accordion behavior for details (only one open at a time)
   calendarCards.forEach(card => {
