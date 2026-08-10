@@ -228,7 +228,9 @@ document.addEventListener("DOMContentLoaded", function () {
       monthSections.forEach(section => {
         if (section.style.display === "none") return;
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 200) {
+        // The scroll offset is around 216px, so we need a threshold slightly larger than that 
+        // (e.g. 250px) to ensure the section is considered active when scrolled to.
+        if (rect.top <= 250) {
           currentId = section.id;
         }
       });
@@ -244,36 +246,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (currentId) {
-      let activeIndex = -1;
-      verticalLinks.forEach((link, index) => {
-        if (link.getAttribute("href").substring(1) === currentId) {
-          activeIndex = index;
-        }
-      });
-
-      verticalLinks.forEach((link, index) => {
+      verticalLinks.forEach(link => {
         const node = link.closest('.timeline__item').querySelector('.timeline__node');
-        
-        if (index < activeIndex) {
-          // Passed items
-          link.style.color = "var(--color-text)";
-          link.style.fontWeight = "var(--font-weight-medium)";
-          if (node) {
-            node.style.borderColor = "var(--color-primary)";
-            node.style.background = "var(--color-primary)";
-          }
-        } else if (index === activeIndex) {
+        if (link.getAttribute("href").substring(1) === currentId) {
           // Active item
           link.style.color = "var(--color-primary)";
           link.style.fontWeight = "var(--font-weight-bold)";
           if (node) {
             node.style.borderColor = "var(--color-primary)";
             node.style.background = "var(--color-primary)";
-            // Add a subtle box-shadow to highlight the active node more prominently
-            node.style.boxShadow = "0 0 0 4px rgba(22, 56, 80, 0.15)";
+            node.style.boxShadow = "none";
           }
         } else {
-          // Upcoming items
+          // Inactive item
           link.style.color = "var(--color-text)";
           link.style.fontWeight = "var(--font-weight-medium)";
           if (node) {
