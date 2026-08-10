@@ -145,13 +145,13 @@
         </div>
         <div class="filter-group">
           <span class="filter-label">Category:</span>
-          <div class="chip-group">
-            <button class="btn btn--secondary btn--pill">All Categories</button>
-            <button class="btn btn--secondary btn--pill">Registration</button>
-            <button class="btn btn--secondary btn--pill">Examination</button>
-            <button class="btn btn--secondary btn--pill">Holiday</button>
-            <button class="btn btn--secondary btn--pill">Foundation</button>
-            <button class="btn btn--secondary btn--pill">Academic</button>
+          <div class="chip-group" id="category-filters">
+            <button class="btn btn--primary btn--pill" data-filter-category="all">All Categories</button>
+            <button class="btn btn--secondary btn--pill" data-filter-category="registration">Registration</button>
+            <button class="btn btn--secondary btn--pill" data-filter-category="examination">Examination</button>
+            <button class="btn btn--secondary btn--pill" data-filter-category="holiday">Holiday</button>
+            <button class="btn btn--secondary btn--pill" data-filter-category="foundation">Foundation</button>
+            <button class="btn btn--secondary btn--pill" data-filter-category="academic">Academic Activity</button>
           </div>
         </div>
       </div>
@@ -159,13 +159,43 @@
 
     <!-- 5. Timeline (Main Content) -->
     <section class="section" style="padding-block: var(--space-4) var(--space-7);">
-      <div class="container" style="max-width: 1000px;">
-        
-        <h3 class="month-heading fade-up stagger-4">August 2026</h3>
-        <hr class="month-divider fade-up stagger-4">
-        
-        <!-- Event: Aug 01 -->
-        <div class="calendar-card fade-up stagger-4" id="evt-aug01-anchor" style="border-left: 4px solid var(--badge-registration);">
+      <div class="container" style="max-width: 1200px;">
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: var(--space-6); align-items: start;">
+          
+          <!-- Left Sidebar: Vertical Scroll-Spy -->
+          <aside style="position: sticky; top: 180px;">
+            <h4 style="font-size: var(--font-size-small); font-weight: var(--font-weight-bold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-4);">Semester Timeline</h4>
+            <ol class="timeline" id="vertical-scroll-spy">
+              <li class="timeline__item">
+                <span class="timeline__node" aria-hidden="true"></span>
+                <div class="timeline__content" style="padding: var(--space-2); background: transparent; border: none; box-shadow: none; margin-top: -8px;">
+                  <a href="#month-aug" class="vertical-timeline-link" style="text-decoration: none; font-weight: var(--font-weight-medium); color: var(--color-text);">August 2026</a>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__node" aria-hidden="true"></span>
+                <div class="timeline__content" style="padding: var(--space-2); background: transparent; border: none; box-shadow: none; margin-top: -8px;">
+                  <a href="#month-sep" class="vertical-timeline-link" style="text-decoration: none; font-weight: var(--font-weight-medium); color: var(--color-text);">September 2026</a>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__node" aria-hidden="true"></span>
+                <div class="timeline__content" style="padding: var(--space-2); background: transparent; border: none; box-shadow: none; margin-top: -8px;">
+                  <a href="#month-oct" class="vertical-timeline-link" style="text-decoration: none; font-weight: var(--font-weight-medium); color: var(--color-text);">October 2026</a>
+                </div>
+              </li>
+            </ol>
+          </aside>
+
+          <!-- Main Events List -->
+          <div>
+            
+        <div class="month-section" id="month-aug">
+          <h3 class="month-heading fade-up stagger-4">August 2026</h3>
+          <hr class="month-divider fade-up stagger-4">
+          
+          <!-- Event: Aug 01 -->
+          <div class="calendar-card fade-up stagger-4" id="evt-aug01-anchor" data-category="registration" style="border-left: 4px solid var(--badge-registration);">
           <div class="calendar-card__date-col">
             <div class="calendar-leaf">
               <div class="calendar-leaf__month" style="background: var(--badge-registration);">AUG</div>
@@ -201,7 +231,7 @@
         </div>
         
         <!-- Event: Aug 04 -->
-        <div class="calendar-card fade-up stagger-4" id="evt-aug04-anchor" style="border-left: 4px solid var(--badge-academic);">
+        <div class="calendar-card fade-up stagger-4" id="evt-aug04-anchor" data-category="academic" style="border-left: 4px solid var(--badge-academic);">
           <div class="calendar-card__date-col">
             <div class="calendar-leaf">
               <div class="calendar-leaf__month" style="background: var(--badge-academic);">AUG</div>
@@ -237,7 +267,7 @@
         </div>
         
         <!-- Event: Aug 15 -->
-        <div class="calendar-card fade-up stagger-4" id="evt-aug15-anchor" style="border-left: 4px solid var(--badge-holiday);">
+        <div class="calendar-card fade-up stagger-4" id="evt-aug15-anchor" data-category="holiday" style="border-left: 4px solid var(--badge-holiday);">
           <div class="calendar-card__date-col">
             <div class="calendar-leaf">
               <div class="calendar-leaf__month" style="background: var(--badge-holiday);">AUG</div>
@@ -272,11 +302,14 @@
           </div>
         </div>
         
-        <h3 class="month-heading fade-up stagger-4" style="margin-top: var(--space-6);">September 2026</h3>
-        <hr class="month-divider fade-up stagger-4">
+        </div>
         
-        <!-- Event: Sep 01 -->
-        <div class="calendar-card fade-up stagger-4" id="evt-sep01-anchor" style="border-left: 4px solid var(--badge-registration);">
+        <div class="month-section" id="month-sep">
+          <h3 class="month-heading fade-up stagger-4" style="margin-top: var(--space-6);">September 2026</h3>
+          <hr class="month-divider fade-up stagger-4">
+          
+          <!-- Event: Sep 01 -->
+          <div class="calendar-card fade-up stagger-4" id="evt-sep01-anchor" data-category="registration" style="border-left: 4px solid var(--badge-registration);">
           <div class="calendar-card__date-col">
             <div class="calendar-leaf">
               <div class="calendar-leaf__month" style="background: var(--badge-registration);">SEP</div>
@@ -312,7 +345,7 @@
         </div>
         
         <!-- Event: Sep 20 -->
-        <div class="calendar-card fade-up stagger-4" id="evt-sep20-anchor" style="border-left: 4px solid var(--badge-examination);">
+        <div class="calendar-card fade-up stagger-4" id="evt-sep20-anchor" data-category="examination" style="border-left: 4px solid var(--badge-examination);">
           <div class="calendar-card__date-col">
             <div class="calendar-leaf">
               <div class="calendar-leaf__month" style="background: var(--badge-examination);">SEP</div>
@@ -351,11 +384,14 @@
           </div>
         </div>
         
-        <h3 class="month-heading fade-up stagger-4" style="margin-top: var(--space-6);">October 2026</h3>
-        <hr class="month-divider fade-up stagger-4">
+        </div>
         
-        <!-- Event: Oct 05 -->
-        <div class="calendar-card fade-up stagger-4" id="evt-oct05-anchor" style="border-left: 4px solid var(--badge-foundation);">
+        <div class="month-section" id="month-oct">
+          <h3 class="month-heading fade-up stagger-4" style="margin-top: var(--space-6);">October 2026</h3>
+          <hr class="month-divider fade-up stagger-4">
+          
+          <!-- Event: Oct 05 -->
+          <div class="calendar-card fade-up stagger-4" id="evt-oct05-anchor" data-category="foundation" style="border-left: 4px solid var(--badge-foundation);">
           <div class="calendar-card__date-col">
             <div class="calendar-leaf">
               <div class="calendar-leaf__month" style="background: var(--badge-foundation);">OCT</div>
@@ -390,6 +426,9 @@
           </div>
         </div>
         
+        </div>
+          </div> <!-- End Main Events List -->
+        </div> <!-- End Grid Layout -->
       </div>
     </section>
   </main>
@@ -409,5 +448,6 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
   <script src="js/components.js"></script>
+  <script src="js/calendar.js"></script>
 </body>
 </html>
