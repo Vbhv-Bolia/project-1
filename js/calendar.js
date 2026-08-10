@@ -133,7 +133,57 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (progressBar && timelineItems.length > 1 && activeIndex >= 0) {
-        const percentage = (activeIndex / (timelineItems.length - 1)) * 100;
+        let percentage = (activeIndex / (timelineItems.length - 1)) * 100;
+        
+        // Calculate smooth progress to the next node
+        if (activeIndex < timelineItems.length - 1) {
+          const currentItem = timelineItems[activeIndex];
+          const nextItem = timelineItems[activeIndex + 1];
+          const currentTargetId = currentItem.getAttribute("href")?.substring(1);
+          const nextTargetId = nextItem.getAttribute("href")?.substring(1);
+          
+          const currentCard = currentTargetId ? document.getElementById(currentTargetId) : null;
+          const nextCard = nextTargetId ? document.getElementById(nextTargetId) : null;
+          
+          if (currentCard && nextCard) {
+            const currentTop = currentCard.getBoundingClientRect().top + window.scrollY;
+            const nextTop = nextCard.getBoundingClientRect().top + window.scrollY;
+            
+            const scrollPos = window.scrollY + 250; // Use same threshold as spy
+            
+            if (scrollPos > currentTop && scrollPos < nextTop) {
+              const distance = nextTop - currentTop;
+              const scrolled = scrollPos - currentTop;
+              const fraction = Math.max(0, Math.min(1, scrolled / distance));
+              
+              const stepSize = 100 / (timelineItems.length - 1);
+              percentage += (fraction * stepSize);
+            }
+          }
+        }
+        
+        // Also handle going past the last node
+        if (activeIndex === timelineItems.length - 1) {
+           const currentItem = timelineItems[activeIndex];
+           const currentTargetId = currentItem.getAttribute("href")?.substring(1);
+           const currentCard = currentTargetId ? document.getElementById(currentTargetId) : null;
+           
+           if (currentCard) {
+             const currentTop = currentCard.getBoundingClientRect().top + window.scrollY;
+             const documentHeight = document.documentElement.scrollHeight;
+             const scrollPos = window.scrollY + window.innerHeight; // End of page
+             
+             if (scrollPos > currentTop) {
+                const distance = documentHeight - currentTop;
+                const scrolled = scrollPos - currentTop;
+                const fraction = Math.max(0, Math.min(1, scrolled / distance));
+                
+                // Allow it to completely fill to 100%
+                percentage = 100; // Since it's the last node, it's already at 100%
+             }
+           }
+        }
+
         progressBar.style.width = `${percentage}%`;
       }
     }
