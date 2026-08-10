@@ -60,8 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
           if (allChip) allChip.click();
         }
 
-        // Sticky header offsets: header is ~72px, filter bar is ~70px.
-        const yOffset = -150; 
+        // Sticky header offsets dynamically calculated
+        const header = document.querySelector('.header');
+        const filterBar = document.querySelector('.filter-bar--glass');
+        const headerHeight = header ? header.offsetHeight : 72;
+        const filterHeight = filterBar ? filterBar.offsetHeight : 120;
+        const yOffset = -(headerHeight + filterHeight + 24); // 24px spacing above card
+        
         const y = targetCard.getBoundingClientRect().top + window.scrollY + yOffset;
 
         window.scrollTo({ top: y, behavior: 'smooth' });
@@ -193,7 +198,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetSection = document.getElementById(targetId);
       
       if (targetSection) {
-        const yOffset = -180;
+        const header = document.querySelector('.header');
+        const filterBar = document.querySelector('.filter-bar--glass');
+        const headerHeight = header ? header.offsetHeight : 72;
+        const filterHeight = filterBar ? filterBar.offsetHeight : 120;
+        const yOffset = -(headerHeight + filterHeight + 24); 
+        
         const y = targetSection.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
