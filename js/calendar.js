@@ -162,23 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     progressBar.style.width = `${percentage}%`;
-    
-    // Update the "TODAY" label to reflect the current mocked date
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const todayLabel = `TODAY (${monthNames[now.getMonth()]} ${String(now.getDate()).padStart(2, '0')})`;
-    
-    // Update the label of the active node to include TODAY
-    parsedDates.forEach(p => {
-       const text = p.item.querySelector('.snapshot-timeline__date').textContent;
-       if (text.includes("TODAY")) {
-         p.item.querySelector('.snapshot-timeline__date').textContent = text.replace(/TODAY \([^\)]+\)/, '').trim();
-       }
-    });
-    
-    const activeItem = document.querySelector('.snapshot-timeline__item--today .snapshot-timeline__date');
-    if (activeItem && !activeItem.textContent.includes("TODAY")) {
-       activeItem.textContent = `TODAY (${activeItem.textContent})`;
-    }
   }
 
   calculateTimeProgress();
