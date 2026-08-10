@@ -13,62 +13,8 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css?v=4">
-  <style>
-    /* Monochrome typographic line accents for department headings */
-    .dept-panel__icon {
-      width: 18px;
-      height: 18px;
-      stroke-width: 2px;
-      color: #4b5563;
-      display: inline-block;
-      vertical-align: -2px;
-      margin-right: 0.625rem;
-    }
-
-    /* Guaranteed chapter-level whitespace separation between domain sections */
-    .dept-domain {
-      padding-top: 7rem !important;
-      padding-bottom: 2rem !important;
-    }
-
-    .dept-domain--last {
-      padding-bottom: 6rem !important;
-    }
-
-    /* Enforce robust separation between individual departments regardless of grid or block layout */
-    .dept-grid {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      row-gap: 5rem !important;
-    }
-
-    .dept-panel:not(:last-child) {
-      margin-bottom: 5rem !important;
-      padding-bottom: 2rem !important;
-    }
-
-    /* Enforce robust separation between individual interdisciplinary programmes */
-    .dept-interdisciplinary {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      gap: 5rem !important;
-      padding-bottom: 5rem !important;
-    }
-
-    .dept-interdisciplinary > div:not(:last-child) {
-      margin-bottom: 5rem !important;
-    }
-
-    /* Placeholder text indicating separation space for future departmental images */
-    .dept-image-space {
-      font-size: 0.875rem;
-      color: #9ca3af;
-      margin-top: 3.5rem;
-      margin-left: 20px;
-      user-select: none;
-    }
-  </style>
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
@@ -76,18 +22,18 @@
     <div class="container">
       <div class="navbar">
         <a href="index.html" class="navbar__brand">
-          <img src="assets/logo.png" alt="IIT Gandhinagar Logo" class="navbar__logo-image" style="height: 48px; width: auto; background-color: white; border-radius: var(--radius); padding: 2px;">
+          <img src="assets/logo.png" alt="IIT Gandhinagar Logo" class="navbar__logo-image">
           <div class="navbar__title">
             <span class="navbar__institute">Indian Institute of Technology Gandhinagar</span>
             <span class="navbar__portal">Academics</span>
           </div>
         </a>
-        <nav>
+        <nav aria-label="Primary Academics Navigation">
           <ul class="navbar__nav">
             <li><a href="index.html" class="navbar__link">Home</a></li>
             <li><a href="academic-affairs.html" class="navbar__link">Academic Affairs</a></li>
             <li><a href="admissions.html" class="navbar__link">Admissions</a></li>
-            <li><a href="programmes.html" class="navbar__link navbar__link--active">Departments</a></li>
+            <li><a href="departments.html" class="navbar__link navbar__link--active" aria-current="page">Departments</a></li>
             <li><a href="calendar.html" class="navbar__link">Calendar</a></li>
           </ul>
         </nav>
@@ -95,27 +41,6 @@
     </div>
   </header>
 
-  <style>
-    /* ══════════════════════════════════════════
-       DEPARTMENT INDEX NAVIGATION
-       ══════════════════════════════════════════ */
-    .programme-anchors {
-      background: var(--color-surface);
-      border-bottom: 1px solid var(--color-border);
-      padding: var(--space-3) 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .programme-anchors .container {
-      display: flex; 
-      gap: var(--space-2); 
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-  </style>
   <div class="page-banner">
     <div class="container">
       <p class="page-banner__text">Academics Portal &middot; Departments &amp; Programmes &middot; Indian Institute of Technology Gandhinagar</p>
@@ -137,12 +62,11 @@
 
     <!-- Page Header -->
     <section class="section" style="padding-block: var(--space-6) var(--space-5);">
-      <div class="container" style="max-width: var(--max-width-content);">
-        <h1 style="font-size: var(--font-size-h2); margin-bottom: var(--space-2);">Departments &amp; Academic Programmes</h1>
-        <p style="color: var(--color-text-muted); font-size: var(--font-size-body); margin-bottom: var(--space-5); max-width: 68ch;">
+      <div class="container">
+        <h1 class="h2" style="margin-bottom: var(--space-2);">Departments &amp; Academic Programmes</h1>
+        <p class="section__description" style="margin-bottom: var(--space-5); max-width: 68ch;">
           IIT Gandhinagar is organised into departments spanning engineering, sciences, humanities, and earth sciences. Each department offers programmes at the undergraduate, postgraduate, and doctoral levels, supported by active research groups and interdisciplinary collaboration.
         </p>
-        
       </div>
     </section>
 

@@ -53,19 +53,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetCard = document.getElementById(targetId);
 
       if (targetCard) {
-        // If the card is hidden by filter, we might want to reset filters or just do nothing.
-        // For now, if it's hidden, let's reset to "All Categories"
         if (targetCard.style.display === "none") {
           const allChip = document.querySelector('button[data-filter-category="all"]');
           if (allChip) allChip.click();
         }
 
-        // Sticky header offsets dynamically calculated
-        const header = document.querySelector('.header');
+        const header = document.querySelector('.site-header');
         const filterBar = document.querySelector('.filter-bar--glass');
         const headerHeight = header ? header.offsetHeight : 72;
         const filterHeight = filterBar ? filterBar.offsetHeight : 120;
-        const yOffset = -(headerHeight + filterHeight + 24); // 24px spacing above card
+        const yOffset = -(headerHeight + filterHeight + 24);
         
         const y = targetCard.getBoundingClientRect().top + window.scrollY + yOffset;
 
@@ -97,16 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function calculateTimeProgress() {
     if (!progressBar || timelineItems.length < 2) return;
 
-    // We use a simulated "today" for the mock environment, or Date.now() in production
-    // The design shows "TODAY (Aug 04)" for 2026, so let's simulate a date around mid-August
-    // as per the user's request, or just use the system date if it's within the semester.
-    const currentYear = 2026; 
     let now = new Date();
-    // For demonstration, if we are in 2026, let's use the actual date. 
-    // If not, mock it so the calendar looks nice.
     if (now.getFullYear() !== 2026) {
       now = new Date("August 15, 2026");
     }
+    const currentYear = 2026;
 
     const parsedDates = [];
     timelineItems.forEach(item => {
@@ -198,11 +190,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetSection = document.getElementById(targetId);
       
       if (targetSection) {
-        const header = document.querySelector('.header');
+        const header = document.querySelector('.site-header');
         const filterBar = document.querySelector('.filter-bar--glass');
         const headerHeight = header ? header.offsetHeight : 72;
         const filterHeight = filterBar ? filterBar.offsetHeight : 120;
-        const yOffset = -(headerHeight + filterHeight + 24); 
+        const yOffset = -(headerHeight + filterHeight + 24);
         
         const y = targetSection.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
@@ -213,11 +205,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateVerticalScrollSpy() {
     let currentId = null;
     
-    // Check if we are at the bottom of the page
     const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
-    
+
     if (isAtBottom) {
-      // Default to the last visible month if at the bottom
       for (let i = monthSections.length - 1; i >= 0; i--) {
         if (monthSections[i].style.display !== "none") {
           currentId = monthSections[i].id;
@@ -228,8 +218,6 @@ document.addEventListener("DOMContentLoaded", function () {
       monthSections.forEach(section => {
         if (section.style.display === "none") return;
         const rect = section.getBoundingClientRect();
-        // The scroll offset is around 216px, so we need a threshold slightly larger than that 
-        // (e.g. 250px) to ensure the section is considered active when scrolled to.
         if (rect.top <= 250) {
           currentId = section.id;
         }

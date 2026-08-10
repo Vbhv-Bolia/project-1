@@ -15,142 +15,15 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
-
-  <style>
-    /* Strict Institutional Typography & Spacing for Thematic Pillars */
-    .pillar-layout {
-      display: grid;
-      gap: var(--space-7);
-      grid-template-columns: 1.25fr 1fr 1fr;
-      align-items: start;
-    }
-
-    @media (max-width: 960px) {
-      .pillar-layout {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-      }
-    }
-
-    .pillar {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-6);
-    }
-
-    .pillar__header {
-      border-top: 3px solid var(--color-primary);
-      padding-top: var(--space-2);
-      margin-bottom: var(--space-1);
-    }
-
-    .pillar__number {
-      font-size: var(--font-size-caption);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--color-text-muted);
-      font-weight: 600;
-      display: block;
-      margin-bottom: var(--space-1);
-    }
-
-    .pillar__title {
-      font-size: var(--font-size-h3);
-      color: var(--color-text);
-      letter-spacing: -0.01em;
-      margin: 0;
-      line-height: var(--line-height-tight);
-    }
-
-    .pillar__desc {
-      font-size: var(--font-size-small);
-      color: var(--color-text-muted);
-      margin-top: var(--space-2);
-      margin-bottom: 0;
-      line-height: var(--line-height-normal);
-    }
-
-    .pillar-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .pillar-section__title {
-      font-size: var(--font-size-caption);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--color-text-muted);
-      font-weight: 600;
-      margin-bottom: var(--space-3);
-      border-bottom: 1px solid var(--color-border);
-      padding-bottom: var(--space-2);
-    }
-
-    .pillar-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-4);
-    }
-
-    .pillar-list--compact {
-      gap: 0.875rem;
-    }
-
-    .pillar-link {
-      display: block;
-      color: var(--color-text);
-      text-decoration: none;
-      font-size: 1.05rem;
-      font-weight: 600;
-      line-height: 1.35;
-      padding-block: 2px;
-      border-left: 2px solid transparent;
-      padding-left: 0;
-      transition: all 0.15s ease;
-    }
-
-    .pillar-list--compact .pillar-link {
-      font-weight: 500;
-      font-size: var(--font-size-small);
-      line-height: 1.5;
-    }
-
-    .pillar-link:hover {
-      color: var(--color-primary);
-      border-left: 2px solid var(--color-primary);
-      padding-left: var(--space-2);
-    }
-    
-    .pillar-link span {
-      display: inline-block;
-    }
-
-    /* Subtext under links for clarity without bloat */
-    .pillar-link__meta {
-      display: block;
-      font-weight: 400;
-      font-size: var(--font-size-caption);
-      color: var(--color-neutral-500);
-      margin-top: var(--space-1);
-      line-height: 1.45;
-    }
-    
-    .pillar-link:hover .pillar-link__meta {
-      color: var(--color-text-muted);
-    }
-  </style>
 </head>
 <body>
+
 
   <!-- ── Institutional Navigation Bar ── -->
   <header class="site-header">
     <div class="container navbar">
       <a href="index.html" class="navbar__brand" aria-label="IIT Gandhinagar Academics Home">
-        <img src="assets/logo.png" alt="IIT Gandhinagar Logo" class="navbar__logo-image" style="height: 48px; width: auto; background-color: white; border-radius: var(--radius); padding: 2px;">
+        <img src="assets/logo.png" alt="IIT Gandhinagar Logo" class="navbar__logo-image">
         <div class="navbar__title">
           <span class="navbar__institute">IIT Gandhinagar</span>
           <span class="navbar__portal">Academics</span>
@@ -410,12 +283,12 @@
       <div class="site-footer__grid">
         <div>
           <p class="site-footer__title">Indian Institute of Technology Gandhinagar</p>
-          <p style="color: var(--color-neutral-400); margin-bottom: var(--space-3); line-height: var(--line-height-normal);">
+          <p class="site-footer__address">
             Palaj, Gandhinagar<br>
             Gujarat 382355, India<br>
             Phone: +91-79-2395-2000
           </p>
-          <p style="color: var(--color-neutral-400); margin: 0;">
+          <p class="site-footer__address">
             Email: academic@iitgn.ac.in
           </p>
         </div>
