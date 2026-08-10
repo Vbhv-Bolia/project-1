@@ -178,13 +178,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateVerticalScrollSpy() {
     let currentId = null;
-    monthSections.forEach(section => {
-      if (section.style.display === "none") return;
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 200) {
-        currentId = section.id;
+    
+    // Check if we are at the bottom of the page
+    const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
+    
+    if (isAtBottom) {
+      // Default to the last visible month if at the bottom
+      for (let i = monthSections.length - 1; i >= 0; i--) {
+        if (monthSections[i].style.display !== "none") {
+          currentId = monthSections[i].id;
+          break;
+        }
       }
-    });
+    } else {
+      monthSections.forEach(section => {
+        if (section.style.display === "none") return;
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 200) {
+          currentId = section.id;
+        }
+      });
+    }
 
     if (!currentId) {
       for (const section of monthSections) {
