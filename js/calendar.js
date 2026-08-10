@@ -244,16 +244,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (currentId) {
-      verticalLinks.forEach(link => {
-        const node = link.closest('.timeline__item').querySelector('.timeline__node');
+      let activeIndex = -1;
+      verticalLinks.forEach((link, index) => {
         if (link.getAttribute("href").substring(1) === currentId) {
-          link.style.color = "var(--color-primary)";
-          link.style.fontWeight = "var(--font-weight-bold)";
-          if (node) node.style.background = "var(--color-primary)";
-        } else {
+          activeIndex = index;
+        }
+      });
+
+      verticalLinks.forEach((link, index) => {
+        const node = link.closest('.timeline__item').querySelector('.timeline__node');
+        
+        if (index < activeIndex) {
+          // Passed items
           link.style.color = "var(--color-text)";
           link.style.fontWeight = "var(--font-weight-medium)";
-          if (node) node.style.background = "";
+          if (node) {
+            node.style.borderColor = "var(--color-primary)";
+            node.style.background = "var(--color-primary)";
+          }
+        } else if (index === activeIndex) {
+          // Active item
+          link.style.color = "var(--color-primary)";
+          link.style.fontWeight = "var(--font-weight-bold)";
+          if (node) {
+            node.style.borderColor = "var(--color-primary)";
+            node.style.background = "var(--color-primary)";
+            // Add a subtle box-shadow to highlight the active node more prominently
+            node.style.boxShadow = "0 0 0 4px rgba(22, 56, 80, 0.15)";
+          }
+        } else {
+          // Upcoming items
+          link.style.color = "var(--color-text)";
+          link.style.fontWeight = "var(--font-weight-medium)";
+          if (node) {
+            node.style.borderColor = "";
+            node.style.background = "";
+            node.style.boxShadow = "none";
+          }
         }
       });
     }
