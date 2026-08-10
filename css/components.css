@@ -1520,7 +1520,7 @@
 
 .comparison-table-wrapper {
   overflow-x: auto;
-  border-radius: calc(var(--radius) * 2);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-2);
   margin-top: var(--space-4);
@@ -1551,10 +1551,10 @@
 }
 
 .comparison-table thead th:first-child {
-  border-radius: calc(var(--radius) * 2) 0 0 0;
+  border-radius: var(--radius-lg) 0 0 0;
 }
 .comparison-table thead th:last-child {
-  border-radius: 0 calc(var(--radius) * 2) 0 0;
+  border-radius: 0 var(--radius-lg) 0 0;
 }
 
 /* ── Body rows ── */
@@ -1756,7 +1756,7 @@
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
   text-decoration: none;
   color: inherit;
@@ -1855,7 +1855,7 @@
   display: flex;
   background: var(--color-background);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-1);
   margin-bottom: var(--space-4);

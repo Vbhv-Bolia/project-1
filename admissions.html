@@ -19,7 +19,7 @@
        ══════════════════════════════════════════ */
     .comparison-table-wrapper {
       overflow-x: auto;
-      border-radius: calc(var(--radius) * 2);
+      border-radius: var(--radius-lg);
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-2);
       margin-top: var(--space-4);
@@ -44,8 +44,8 @@
       white-space: nowrap;
       border-bottom: none;
     }
-    .comparison-table thead th:first-child { border-radius: calc(var(--radius) * 2) 0 0 0; }
-    .comparison-table thead th:last-child { border-radius: 0 calc(var(--radius) * 2) 0 0; }
+    .comparison-table thead th:first-child { border-radius: var(--radius-lg) 0 0 0; }
+    .comparison-table thead th:last-child { border-radius: 0 var(--radius-lg) 0 0; }
     .comparison-table tbody tr {
       border-bottom: 1px solid var(--color-border);
       transition: background-color var(--duration) var(--ease);
@@ -144,7 +144,7 @@
     .journey-step__content {
       background: var(--color-background);
       padding: var(--space-4);
-      border-radius: calc(var(--radius) * 2);
+      border-radius: var(--radius-lg);
       border: 1px solid var(--color-border);
       flex-grow: 1;
       box-shadow: var(--shadow-1);
