@@ -1448,6 +1448,7 @@
   flex-direction: column;
   padding-block: 2rem;
   padding-bottom: 3.5rem; /* increased space after link to next department */
+  scroll-margin-top: 160px;
 }
 
 
